@@ -1,14 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="IttefaqConstructionServices.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Metro-UI-CSS-master/build/css/metro.css" rel="stylesheet" />
-    <link href="Metro-UI-CSS-master/build/css/metro-colors.css" rel="stylesheet" />
-    <link href="Metro-UI-CSS-master/build/css/metro-icons.css" rel="stylesheet" />
-    <link href="Metro-UI-CSS-master/build/css/metro-responsive.css" rel="stylesheet" />
-    <link href="Metro-UI-CSS-master/build/css/metro-rtl.css" rel="stylesheet" />
-    <link href="Metro-UI-CSS-master/build/css/metro-schemes.css" rel="stylesheet" />
-    <script src="Metro-UI-CSS-master/test/RequireJS/scripts/jquery.js"></script>
-    <script src="Metro-UI-CSS-master/test/RequireJS/scripts/metro.js"></script>
-    <script src="Metro-UI-CSS-master/docs/js/jquery.dataTables.min.js"></script>
+    <link href="CSS/metro-colors.css" rel="stylesheet" />
+    <link href="CSS/metro.css" rel="stylesheet" />
+    <link href="CSS/metro-colors.css" rel="stylesheet" />
+    <link href="CSS/metro-icons.css" rel="stylesheet" />
+    <link href="CSS/metro-responsive.css" rel="stylesheet" />
+    <link href="CSS/metro-rtl.css" rel="stylesheet" />
+    <link href="CSS/metro-schemes.css" rel="stylesheet" />
+    <script src="CSS/metro.js"></script>
+    <script src="CSS/jquery.js"></script>
+    <script src="CSS/jquery.dataTables.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="bodyContents" runat="server">
     <asp:Label runat="server" ID="lblSuccess" Text="Label Sucess" CssClass="tag success" Visible="false"></asp:Label>
