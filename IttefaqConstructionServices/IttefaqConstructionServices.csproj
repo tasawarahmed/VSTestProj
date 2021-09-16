@@ -1,0 +1,860 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AB56E29-4C20-4A74-897E-17B37C3BF7E8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IttefaqConstructionServices</RootNamespace>
+    <AssemblyName>IttefaqConstructionServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\..\..\..\Desktop\ICS\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\..\..\..\Desktop\ICS\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountDetails.aspx" />
+    <Content Include="Dashboard1.aspx" />
+    <Content Include="Dashboard2.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="GoogleCharts.aspx" />
+    <Content Include="Images\accounts.jpg" />
+    <Content Include="Images\hr.jpg" />
+    <Content Include="Images\site.jpg" />
+    <Content Include="Images\storage.jpg" />
+    <Content Include="Images\tasks.jpg" />
+    <Content Include="Images\tasks.png" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-colors.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-colors.min.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-icons.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-icons.min.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-responsive.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-responsive.min.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-rtl.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-rtl.min.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-schemes.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro-schemes.min.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro.css" />
+    <Content Include="Metro-UI-CSS-master\build\css\metro.min.css" />
+    <Content Include="Metro-UI-CSS-master\build\fonts\metro.svg" />
+    <Content Include="Metro-UI-CSS-master\build\js\metro.js" />
+    <Content Include="Metro-UI-CSS-master\build\js\metro.min.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\docs.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\ga.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\jquery-2.1.3.min.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\jquery-3.1.0.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\jquery-3.1.0.min.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\jquery.dataTables.min.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\metro.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-apollo.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-basic.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-clj.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-css.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-dart.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-erlang.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-go.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-hs.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-lisp.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-llvm.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-lua.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-matlab.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-ml.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-mumps.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-n.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-pascal.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-proto.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-r.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-rd.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-scala.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-sql.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-tcl.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-tex.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-vb.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-vhdl.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-wiki.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-xq.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\lang-yaml.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\prettify.css" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\prettify.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\prettify\run_prettify.js" />
+    <Content Include="Metro-UI-CSS-master\docs\js\select2.min.js" />
+    <Content Include="Metro-UI-CSS-master\fonts\metro.svg" />
+    <Content Include="Metro-UI-CSS-master\js\global.js" />
+    <Content Include="Metro-UI-CSS-master\js\initiator.js" />
+    <Content Include="Metro-UI-CSS-master\js\requirements.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\core-utils.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\easing.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\hotkeys.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\mousewheel.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\pre-code.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\touch-handler.js" />
+    <Content Include="Metro-UI-CSS-master\js\utils\tpl.js" />
+    <Content Include="Metro-UI-CSS-master\js\widget.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\accordion.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\appbar.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\audio-player.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\button-groups.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\calendar.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\carousel.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\charm.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\clock.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\countdown.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\datatable.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\datepicker.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\dialog.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\donut.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\draggable.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\dropdown.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\fit-image.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\fluentmenu.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\grid.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\hint.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\inputs.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\keypad.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\listview.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\notify.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\panel.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\plugin.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\popovers.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\preloaders.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\presenter.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\progressbar.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\rating.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\select.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\slider.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\stepper.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\streamer.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\tabcontrol.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\tile.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\treeview.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\validator.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\video-player.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\window.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\wizard.js" />
+    <Content Include="Metro-UI-CSS-master\js\widgets\wizard2.js" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\css\metro.min.css" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\index.html" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\scripts\jquery-2.1.3.min.js" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\scripts\jquery.js" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\scripts\main.js" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\scripts\metro.js" />
+    <Content Include="Metro-UI-CSS-master\test\RequireJS\scripts\require.js" />
+    <Content Include="Pages\Accounts\ChequesInHandDetails.aspx" />
+    <Content Include="Pages\Accounts\GeneralTransactions.aspx" />
+    <Content Include="Pages\Accounts\NewAccount.aspx" />
+    <Content Include="Pages\Accounts\OtherReports.aspx" />
+    <Content Include="Pages\Accounts\Reports.aspx" />
+    <Content Include="Pages\Accounts\SiteLiabAssociationWithPM.aspx" />
+    <Content Include="Pages\Accounts\Status.aspx" />
+    <Content Include="Pages\Accounts\Transactions.aspx" />
+    <Content Include="Pages\Capital\CapitalAccountStatus.aspx" />
+    <Content Include="Pages\Capital\NewCapitalAccount.aspx" />
+    <Content Include="Pages\Configurations\Backup.aspx" />
+    <Content Include="Pages\Configurations\Regions.aspx" />
+    <Content Include="Pages\Configurations\SiteConfigurator.aspx" />
+    <Content Include="Pages\HumanResources\AllocationPlaces.aspx" />
+    <Content Include="Pages\HumanResources\NewStaffMember.aspx" />
+    <Content Include="Pages\HumanResources\SalariesDisbursement.aspx" />
+    <Content Include="Pages\HumanResources\StaffAllocation.aspx" />
+    <Content Include="Pages\Individuals\IndividualAccountTransactions.aspx" />
+    <Content Include="Pages\Individuals\IndividualsAccountStatus.aspx" />
+    <Content Include="Pages\Individuals\NewIndividualAccount.aspx" />
+    <Content Include="Pages\Investments\InvestmentsReports.aspx" />
+    <Content Include="Pages\Investments\InvestmentStatus.aspx" />
+    <Content Include="Pages\Investments\InvestmentTransactions.aspx" />
+    <Content Include="Pages\Investments\NewInvestment.aspx" />
+    <Content Include="Pages\Membership\Login.aspx" />
+    <Content Include="Pages\Membership\Logout.aspx" />
+    <Content Include="Pages\Membership\NewUser.aspx" />
+    <Content Include="Pages\Membership\ProjectManagers.aspx" />
+    <Content Include="Pages\Membership\UnLogin.aspx" />
+    <Content Include="Pages\Membership\UpdateUser.aspx" />
+    <Content Include="Pages\Membership\UserRoles.aspx" />
+    <Content Include="Pages\NotForProfit\AddBeneficiries.aspx" />
+    <Content Include="Pages\NotForProfit\viewBeneficiaries.aspx" />
+    <Content Include="Pages\Sites\NewSite.aspx" />
+    <Content Include="Pages\Sites\Regions.aspx" />
+    <Content Include="Pages\Sites\SiteAccounts.aspx" />
+    <Content Include="Pages\Sites\SiteDemands.aspx" />
+    <Content Include="Pages\Sites\SiteReports.aspx" />
+    <Content Include="Pages\Sites\SiteStatus.aspx" />
+    <Content Include="Pages\Sites\SiteTransactions.aspx" />
+    <Content Include="Pages\Sites\SubRegions.aspx" />
+    <Content Include="Pages\Store\Items.aspx" />
+    <Content Include="Pages\Store\Locations.aspx" />
+    <Content Include="Pages\Store\Reports.aspx" />
+    <Content Include="Pages\Store\Transactions.aspx" />
+    <Content Include="Scripts\tinymce.min.js" />
+    <Content Include="SiteDetails.aspx" />
+    <Content Include="Test.aspx" />
+    <Content Include="Test2.aspx" />
+    <Content Include="UnauthorizedAccess.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountDetails.aspx.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountDetails.aspx.designer.cs">
+      <DependentUpon>AccountDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard1.aspx.cs">
+      <DependentUpon>Dashboard1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard1.aspx.designer.cs">
+      <DependentUpon>Dashboard1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard2.aspx.cs">
+      <DependentUpon>Dashboard2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard2.aspx.designer.cs">
+      <DependentUpon>Dashboard2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleCharts.aspx.cs">
+      <DependentUpon>GoogleCharts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoogleCharts.aspx.designer.cs">
+      <DependentUpon>GoogleCharts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Account.cs" />
+    <Compile Include="Logic\Accounts.cs" />
+    <Compile Include="Logic\AccountStructure.cs" />
+    <Compile Include="Logic\Beneficiary.cs" />
+    <Compile Include="Logic\Connection.cs" />
+    <Compile Include="Logic\DDList.cs" />
+    <Compile Include="Logic\ExcelData.cs" />
+    <Compile Include="Logic\Family.cs" />
+    <Compile Include="Logic\MaterialsConsumption.cs" />
+    <Compile Include="Logic\Salary.cs" />
+    <Compile Include="Logic\StringsDDList.cs" />
+    <Compile Include="Logic\Utilities.cs" />
+    <Compile Include="Logic\Validator.cs" />
+    <Compile Include="Pages\Accounts\AccountsMaster.master.cs">
+      <DependentUpon>AccountsMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\AccountsMaster.master.designer.cs">
+      <DependentUpon>AccountsMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\ChequesInHandDetails.aspx.cs">
+      <DependentUpon>ChequesInHandDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\ChequesInHandDetails.aspx.designer.cs">
+      <DependentUpon>ChequesInHandDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\GeneralTransactions.aspx.cs">
+      <DependentUpon>GeneralTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\GeneralTransactions.aspx.designer.cs">
+      <DependentUpon>GeneralTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\NewAccount.aspx.cs">
+      <DependentUpon>NewAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\NewAccount.aspx.designer.cs">
+      <DependentUpon>NewAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\OtherReports.aspx.cs">
+      <DependentUpon>OtherReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\OtherReports.aspx.designer.cs">
+      <DependentUpon>OtherReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\SiteLiabAssociationWithPM.aspx.cs">
+      <DependentUpon>SiteLiabAssociationWithPM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\SiteLiabAssociationWithPM.aspx.designer.cs">
+      <DependentUpon>SiteLiabAssociationWithPM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Accounts\Transactions.aspx.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Accounts\Transactions.aspx.designer.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Capital\CapitalAccountStatus.aspx.cs">
+      <DependentUpon>CapitalAccountStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Capital\CapitalAccountStatus.aspx.designer.cs">
+      <DependentUpon>CapitalAccountStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Capital\CapitalMaster.master.cs">
+      <DependentUpon>CapitalMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Capital\CapitalMaster.master.designer.cs">
+      <DependentUpon>CapitalMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Capital\NewCapitalAccount.aspx.cs">
+      <DependentUpon>NewCapitalAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Capital\NewCapitalAccount.aspx.designer.cs">
+      <DependentUpon>NewCapitalAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Configurations\Backup.aspx.cs">
+      <DependentUpon>Backup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Configurations\Backup.aspx.designer.cs">
+      <DependentUpon>Backup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Configurations\ConfigurationsMaster.master.cs">
+      <DependentUpon>ConfigurationsMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Configurations\ConfigurationsMaster.master.designer.cs">
+      <DependentUpon>ConfigurationsMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Configurations\Regions.aspx.cs">
+      <DependentUpon>Regions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Configurations\Regions.aspx.designer.cs">
+      <DependentUpon>Regions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Configurations\SiteConfigurator.aspx.cs">
+      <DependentUpon>SiteConfigurator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Configurations\SiteConfigurator.aspx.designer.cs">
+      <DependentUpon>SiteConfigurator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HumanResources\AllocationPlaces.aspx.cs">
+      <DependentUpon>AllocationPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HumanResources\AllocationPlaces.aspx.designer.cs">
+      <DependentUpon>AllocationPlaces.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HumanResources\HumanResourcesMaster.master.cs">
+      <DependentUpon>HumanResourcesMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HumanResources\HumanResourcesMaster.master.designer.cs">
+      <DependentUpon>HumanResourcesMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HumanResources\NewStaffMember.aspx.cs">
+      <DependentUpon>NewStaffMember.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HumanResources\NewStaffMember.aspx.designer.cs">
+      <DependentUpon>NewStaffMember.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HumanResources\SalariesDisbursement.aspx.cs">
+      <DependentUpon>SalariesDisbursement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HumanResources\SalariesDisbursement.aspx.designer.cs">
+      <DependentUpon>SalariesDisbursement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HumanResources\StaffAllocation.aspx.cs">
+      <DependentUpon>StaffAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\HumanResources\StaffAllocation.aspx.designer.cs">
+      <DependentUpon>StaffAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Individuals\IndividualAccountTransactions.aspx.cs">
+      <DependentUpon>IndividualAccountTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Individuals\IndividualAccountTransactions.aspx.designer.cs">
+      <DependentUpon>IndividualAccountTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Individuals\IndividualsAccountStatus.aspx.cs">
+      <DependentUpon>IndividualsAccountStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Individuals\IndividualsAccountStatus.aspx.designer.cs">
+      <DependentUpon>IndividualsAccountStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Individuals\IndividualsMaster.master.cs">
+      <DependentUpon>IndividualsMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Individuals\IndividualsMaster.master.designer.cs">
+      <DependentUpon>IndividualsMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Individuals\NewIndividualAccount.aspx.cs">
+      <DependentUpon>NewIndividualAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Individuals\NewIndividualAccount.aspx.designer.cs">
+      <DependentUpon>NewIndividualAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentsMaster.master.cs">
+      <DependentUpon>InvestmentsMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentsMaster.master.designer.cs">
+      <DependentUpon>InvestmentsMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentsReports.aspx.cs">
+      <DependentUpon>InvestmentsReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentsReports.aspx.designer.cs">
+      <DependentUpon>InvestmentsReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentStatus.aspx.cs">
+      <DependentUpon>InvestmentStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentStatus.aspx.designer.cs">
+      <DependentUpon>InvestmentStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentTransactions.aspx.cs">
+      <DependentUpon>InvestmentTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Investments\InvestmentTransactions.aspx.designer.cs">
+      <DependentUpon>InvestmentTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Investments\NewInvestment.aspx.cs">
+      <DependentUpon>NewInvestment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Investments\NewInvestment.aspx.designer.cs">
+      <DependentUpon>NewInvestment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\MembershipMaster.master.cs">
+      <DependentUpon>MembershipMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\MembershipMaster.master.designer.cs">
+      <DependentUpon>MembershipMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\NewUser.aspx.cs">
+      <DependentUpon>NewUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\NewUser.aspx.designer.cs">
+      <DependentUpon>NewUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\ProjectManagers.aspx.cs">
+      <DependentUpon>ProjectManagers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\ProjectManagers.aspx.designer.cs">
+      <DependentUpon>ProjectManagers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\UnLogin.aspx.cs">
+      <DependentUpon>UnLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\UnLogin.aspx.designer.cs">
+      <DependentUpon>UnLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\UpdateUser.aspx.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\UpdateUser.aspx.designer.cs">
+      <DependentUpon>UpdateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Membership\UserRoles.aspx.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Membership\UserRoles.aspx.designer.cs">
+      <DependentUpon>UserRoles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\AddBeneficiries.aspx.cs">
+      <DependentUpon>AddBeneficiries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\AddBeneficiries.aspx.designer.cs">
+      <DependentUpon>AddBeneficiries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\NotForProfit.master.cs">
+      <DependentUpon>NotForProfit.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\NotForProfit.master.designer.cs">
+      <DependentUpon>NotForProfit.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\viewBeneficiaries.aspx.cs">
+      <DependentUpon>viewBeneficiaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\viewBeneficiaries.aspx.designer.cs">
+      <DependentUpon>viewBeneficiaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\NewSite.aspx.cs">
+      <DependentUpon>NewSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\NewSite.aspx.designer.cs">
+      <DependentUpon>NewSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\Regions.aspx.cs">
+      <DependentUpon>Regions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\Regions.aspx.designer.cs">
+      <DependentUpon>Regions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteAccounts.aspx.cs">
+      <DependentUpon>SiteAccounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteAccounts.aspx.designer.cs">
+      <DependentUpon>SiteAccounts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteDemands.aspx.cs">
+      <DependentUpon>SiteDemands.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteDemands.aspx.designer.cs">
+      <DependentUpon>SiteDemands.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteReports.aspx.cs">
+      <DependentUpon>SiteReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteReports.aspx.designer.cs">
+      <DependentUpon>SiteReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SitesMaster.master.cs">
+      <DependentUpon>SitesMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SitesMaster.master.designer.cs">
+      <DependentUpon>SitesMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteStatus.aspx.cs">
+      <DependentUpon>SiteStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteStatus.aspx.designer.cs">
+      <DependentUpon>SiteStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteTransactions.aspx.cs">
+      <DependentUpon>SiteTransactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SiteTransactions.aspx.designer.cs">
+      <DependentUpon>SiteTransactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sites\SubRegions.aspx.cs">
+      <DependentUpon>SubRegions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Sites\SubRegions.aspx.designer.cs">
+      <DependentUpon>SubRegions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Store\Items.aspx.cs">
+      <DependentUpon>Items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store\Items.aspx.designer.cs">
+      <DependentUpon>Items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Store\Locations.aspx.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store\Locations.aspx.designer.cs">
+      <DependentUpon>Locations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Store\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Store\StoreMaster.master.cs">
+      <DependentUpon>StoreMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store\StoreMaster.master.designer.cs">
+      <DependentUpon>StoreMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Store\Transactions.aspx.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Store\Transactions.aspx.designer.cs">
+      <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tasks\TasksMaster.master.cs">
+      <DependentUpon>TasksMaster.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tasks\TasksMaster.master.designer.cs">
+      <DependentUpon>TasksMaster.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteDetails.aspx.cs">
+      <DependentUpon>SiteDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteDetails.aspx.designer.cs">
+      <DependentUpon>SiteDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Test2.aspx.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test2.aspx.designer.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnauthorizedAccess.aspx.cs">
+      <DependentUpon>UnauthorizedAccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UnauthorizedAccess.aspx.designer.cs">
+      <DependentUpon>UnauthorizedAccess.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Metro-UI-CSS-master\build\fonts\metro.eot" />
+    <Content Include="Metro-UI-CSS-master\build\fonts\metro.ttf" />
+    <Content Include="Metro-UI-CSS-master\build\fonts\metro.woff" />
+    <Content Include="Metro-UI-CSS-master\build\fonts\selection.json" />
+    <Content Include="Metro-UI-CSS-master\fonts\metro.eot" />
+    <Content Include="Metro-UI-CSS-master\fonts\metro.ttf" />
+    <Content Include="Metro-UI-CSS-master\fonts\metro.woff" />
+    <Content Include="Metro-UI-CSS-master\fonts\selection.json" />
+    <Content Include="Metro-UI-CSS-master\less\accordion.less" />
+    <Content Include="Metro-UI-CSS-master\less\animations.less" />
+    <Content Include="Metro-UI-CSS-master\less\appbar.less" />
+    <Content Include="Metro-UI-CSS-master\less\audio-player.less" />
+    <Content Include="Metro-UI-CSS-master\less\breadcrumbs.less" />
+    <Content Include="Metro-UI-CSS-master\less\buttons.less" />
+    <Content Include="Metro-UI-CSS-master\less\calendar.less" />
+    <Content Include="Metro-UI-CSS-master\less\carousel.less" />
+    <Content Include="Metro-UI-CSS-master\less\charms.less" />
+    <Content Include="Metro-UI-CSS-master\less\clock.less" />
+    <Content Include="Metro-UI-CSS-master\less\colors.less" />
+    <Content Include="Metro-UI-CSS-master\less\countdown.less" />
+    <Content Include="Metro-UI-CSS-master\less\datatable.less" />
+    <Content Include="Metro-UI-CSS-master\less\dialog.less" />
+    <Content Include="Metro-UI-CSS-master\less\donut.less" />
+    <Content Include="Metro-UI-CSS-master\less\flex-grid.less" />
+    <Content Include="Metro-UI-CSS-master\less\flex.less" />
+    <Content Include="Metro-UI-CSS-master\less\fluent-menu.less" />
+    <Content Include="Metro-UI-CSS-master\less\fonts.less" />
+    <Content Include="Metro-UI-CSS-master\less\grid.less" />
+    <Content Include="Metro-UI-CSS-master\less\hints.less" />
+    <Content Include="Metro-UI-CSS-master\less\images.less" />
+    <Content Include="Metro-UI-CSS-master\less\inputs.less" />
+    <Content Include="Metro-UI-CSS-master\less\keypad.less" />
+    <Content Include="Metro-UI-CSS-master\less\layout.less" />
+    <Content Include="Metro-UI-CSS-master\less\lists.less" />
+    <Content Include="Metro-UI-CSS-master\less\listview.less" />
+    <Content Include="Metro-UI-CSS-master\less\menu.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-colors.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-icons-animation.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-icons-content.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-icons-mixins.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-icons.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-responsive.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-rtl.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro-schemes.less" />
+    <Content Include="Metro-UI-CSS-master\less\metro.less" />
+    <Content Include="Metro-UI-CSS-master\less\mixins.less" />
+    <Content Include="Metro-UI-CSS-master\less\notify.less" />
+    <Content Include="Metro-UI-CSS-master\less\pagination.less" />
+    <Content Include="Metro-UI-CSS-master\less\panels.less" />
+    <Content Include="Metro-UI-CSS-master\less\popovers.less" />
+    <Content Include="Metro-UI-CSS-master\less\preloaders.less" />
+    <Content Include="Metro-UI-CSS-master\less\presenter.less" />
+    <Content Include="Metro-UI-CSS-master\less\progressbar.less" />
+    <Content Include="Metro-UI-CSS-master\less\rating.less" />
+    <Content Include="Metro-UI-CSS-master\less\reset.less" />
+    <Content Include="Metro-UI-CSS-master\less\scheme-builder.less" />
+    <Content Include="Metro-UI-CSS-master\less\select2.less" />
+    <Content Include="Metro-UI-CSS-master\less\sidebar.less" />
+    <Content Include="Metro-UI-CSS-master\less\slider.less" />
+    <Content Include="Metro-UI-CSS-master\less\stepper.less" />
+    <Content Include="Metro-UI-CSS-master\less\streamer.less" />
+    <Content Include="Metro-UI-CSS-master\less\tabcontrol.less" />
+    <Content Include="Metro-UI-CSS-master\less\tables.less" />
+    <Content Include="Metro-UI-CSS-master\less\tiles.less" />
+    <Content Include="Metro-UI-CSS-master\less\toolbars.less" />
+    <Content Include="Metro-UI-CSS-master\less\transform.less" />
+    <Content Include="Metro-UI-CSS-master\less\treeview.less" />
+    <Content Include="Metro-UI-CSS-master\less\typography.less" />
+    <Content Include="Metro-UI-CSS-master\less\utils.less" />
+    <Content Include="Metro-UI-CSS-master\less\vars.less" />
+    <Content Include="Metro-UI-CSS-master\less\video-player.less" />
+    <Content Include="Metro-UI-CSS-master\less\windows.less" />
+    <Content Include="Metro-UI-CSS-master\less\wizard.less" />
+    <Content Include="Metro-UI-CSS-master\less\wizard2.less" />
+    <Content Include="Site.Master" />
+    <Content Include="Pages\Investments\InvestmentsMaster.master" />
+    <Content Include="Pages\Sites\SitesMaster.master" />
+    <Content Include="Pages\Capital\CapitalMaster.master" />
+    <Content Include="Pages\Configurations\ConfigurationsMaster.master" />
+    <Content Include="Pages\HumanResources\HumanResourcesMaster.master" />
+    <Content Include="Pages\Individuals\IndividualsMaster.master" />
+    <Content Include="Pages\Store\StoreMaster.master" />
+    <Content Include="Pages\Tasks\TasksMaster.master" />
+    <Content Include="Pages\Accounts\AccountsMaster.master" />
+    <Content Include="Pages\Membership\MembershipMaster.master" />
+    <Content Include="Pages\NotForProfit\NotForProfit.master" />
+    <None Include="Properties\PublishProfiles\ICSPublish.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61187</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53723/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
