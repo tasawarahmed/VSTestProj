@@ -77,6 +77,8 @@
     <Content Include="Images\storage.jpg" />
     <Content Include="Images\tasks.jpg" />
     <Content Include="Images\tasks.png" />
+    <Content Include="Logic\ClosedXML.dll" />
+    <Content Include="Logic\DocumentFormat.OpenXml.dll" />
     <Content Include="Metro-UI-CSS-master\build\css\metro-colors.css" />
     <Content Include="Metro-UI-CSS-master\build\css\metro-colors.min.css" />
     <Content Include="Metro-UI-CSS-master\build\css\metro-icons.css" />
@@ -847,6 +849,7 @@
     <Content Include="Pages\Membership\MembershipMaster.master" />
     <Content Include="Pages\NotForProfit\NotForProfit.master" />
     <None Include="Properties\PublishProfiles\ICSPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\PublishProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

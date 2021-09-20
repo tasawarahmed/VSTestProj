@@ -41,7 +41,7 @@
         <div class="input-control text full-size">
             <asp:TextBox runat="server" ID="txtCount"></asp:TextBox>
         </div>
-        <asp:Button runat="server" ID="btnAdd" CssClass="button primary full-size" Text="OK" />
+        <asp:Button runat="server" ID="btnAdd" CssClass="button primary full-size" Text="OK" OnClick="btnAdd_Click" />
     </div>
     <div class="cell colspan8">
         <asp:GridView AllowSorting="true" ID="Gridview1" Width="98%" CssClass="table striped hovered border bordered"  AutoGenerateColumns="False" runat="server">
