@@ -17,8 +17,6 @@ namespace IttefaqConstructionServices
             }
             else
             {
-                string userName = Session["UserName"].ToString();
-                TextBox1.Text = userName;
             }
         }
     }

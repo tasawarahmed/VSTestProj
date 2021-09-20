@@ -46,396 +46,190 @@
 </head>
 <body>
     <form id="form1" runat="server" data-role="validator" data-hint-mode="line">
-            <div class="grid">
-                <div class="row cells12">
-                    <ul class="m-menu">
-                        <li class="stick bg-black fg-white">
-                            <asp:HyperLink runat="server" ID="HyperLink33" Text="" NavigateUrl="~/Default.aspx">
-                                <span class="mif-home icon"></span>
-                                &nbsp<%=Session["companyAbbr"].ToString() %>
-                            </asp:HyperLink>
-                        </li>
-                        <li class="stick bg-yellow fg-black">
-                            <asp:HyperLink runat="server" ID="HyperLink3" Text="" NavigateUrl="~/Dashboard2.aspx">
-                                <span class="mif-chart-bars icon"></span>
-                                Admin Summary
-                            </asp:HyperLink>
-                        </li>
-                        <%--                    <li class="stick bg-darkCobalt fg-white">
-                        <asp:HyperLink runat="server" ID="HyperLink27" NavigateUrl="">
-                                <span class="mif-home icon"></span>
-                                &nbspHome
-                        </asp:HyperLink>
-                    </li>--%>
-                        <li class="stick bg-darkCobalt fg-white">
-                            <a href="#" class="dropdown-toggle"><span class="mif-books icon"></span>&nbspGeneral Accounts</a>
-                            <div class="m-menu-container" data-role="dropdown" data-no-close="true">
-                                <div class="grid no-margin">
-                                    <div class="row cells5">
-                                        <div class="cell padding10">
-                                            <div class="image-container bordered handing ani image-format-hd">
-                                                <div class="frame">
-                                                    <asp:Image runat="server" ID="Image3" Width="150" Height="150" ImageUrl="~/Images/accounts.jpg" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cell colspan2">
-                                            <h2 class="fg-white text-bold text-shadow">General Accounts Management</h2>
-                                            <p class="padding20 no-padding-top no-padding-left no-padding-bottom fg-white">
-                                                This portion of the application helps you to manage general accounts. General accounts mean the accounts NOT INVOLVING any site accounts. Hence no site related transactions should be made using this section of the application. For any site related transaction go to sites link in the main menu.
-                                            </p>
-                                        </div>
-                                        <div class="cell colspan2">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <h3 class="text-shadow">Choose desired task</h3>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cell colspan1">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink34" NavigateUrl="~/Pages/Accounts/NewAccount.aspx">
+        <div class="grid">
+            <div class="row cells12">
+                <div class="app-bar fixed-top">
+                    <a class="app-bar-element bg-black" href="#"><%=Session["companyAbbr"].ToString() %></a>
+                    <span class="app-bar-divider"></span>
+                    <ul class="app-bar-menu">
+                        <li><a href="#">Welcome! <%=Session["UserName"].ToString() %></a></li>
+                        <li>
+                            <a href="#" class="dropdown-toggle">General Accounts</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink18" NavigateUrl="~/Pages/Accounts/NewAccount.aspx">
                                         <span>New Account</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink35" NavigateUrl="~/Pages/Accounts/Transactions.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink19" NavigateUrl="~/Pages/Accounts/Transactions.aspx">
                                         <span>Transactions</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink9" NavigateUrl="~/Pages/Accounts/GeneralTransactions.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink20" NavigateUrl="~/Pages/Accounts/GeneralTransactions.aspx">
                                         <span>Most Frequent Transactions</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink36" NavigateUrl="~/Pages/Accounts/Status.aspx">
+                                    </asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink21" NavigateUrl="~/Pages/Accounts/Status.aspx">
                                         <span>Account Status</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cell colspan1">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink37" NavigateUrl="~/Pages/Accounts/Reports.aspx">
+                                    </asp:HyperLink></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink22" NavigateUrl="~/Pages/Accounts/Reports.aspx">
                                                     <span>Summary Reports</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink38" NavigateUrl="~/Pages/Accounts/OtherReports.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink23" NavigateUrl="~/Pages/Accounts/OtherReports.aspx">
                                                     <span>Other Reports</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Pages/Accounts/SiteLiabAssociationWithPM.aspx">
+                                    </asp:HyperLink></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink24" NavigateUrl="~/Pages/Accounts/SiteLiabAssociationWithPM.aspx">
                                                     <span>Site Liab to PMs</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <%--                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink10" NavigateUrl="~/Pages/Accounts/ChequesInHandDetails.aspx">
-                                                    <span>Cheques in Hand Details</span>
-                                                </asp:HyperLink>
-                                            </li>--%>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </asp:HyperLink></li>
+                            </ul>
                         </li>
-                        <li class="stick bg-darkCobalt fg-white">
-                            <a href="#" class="dropdown-toggle"><span class="mif-flow-tree icon"></span>&nbspSites</a>
-                            <div class="m-menu-container" data-role="dropdown" data-no-close="true">
-                                <div class="grid no-margin">
-                                    <div class="row cells5">
-                                        <div class="cell padding10">
-                                            <div class="image-container bordered handing ani image-format-hd">
-                                                <div class="frame">
-                                                    <asp:Image runat="server" ID="Image4" Width="150" Height="150" ImageUrl="~/Images/site.jpg" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cell colspan2">
-                                            <h2 class="fg-white text-bold text-shadow">Site Accounts Management</h2>
-                                            <p class="padding20 no-padding-top no-padding-left no-padding-bottom fg-white">
-                                                This portion of the application helps you to manage site accounts. Site accounts mean the accounts involving any site related flow of money. Hence no general transactions should be made using this section of the application.
-                                            </p>
-                                        </div>
-                                        <div class="cell colspan2">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <h3 class="text-shadow">Choose desired task</h3>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cell colspan1">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink28" NavigateUrl="~/Pages/Sites/NewSite.aspx">
+                        <li>
+                            <a href="" class="dropdown-toggle">Sites</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink25" NavigateUrl="~/Pages/Sites/NewSite.aspx">
                                         <span>New Site</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink39" NavigateUrl="~/Pages/Sites/Regions.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink26" NavigateUrl="~/Pages/Sites/Regions.aspx">
                                         <span>New Region</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink40" NavigateUrl="~/Pages/Sites/subregions.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink27" NavigateUrl="~/Pages/Sites/subregions.aspx">
                                         <span>Sub Regions</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink44" NavigateUrl="~/Pages/Sites/SiteStatus.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink29" NavigateUrl="~/Pages/Sites/SiteStatus.aspx">
                                         <span>Site Status</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink11" NavigateUrl="~/Pages/Sites/SiteDemands.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink30" NavigateUrl="~/Pages/Sites/SiteDemands.aspx">
                                         <span>Site Demands</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cell colspan1">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink45" NavigateUrl="~/Pages/Sites/SiteAccounts.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink32" NavigateUrl="~/Pages/Sites/SiteAccounts.aspx">
                                         <span>Site Accounts</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink43" NavigateUrl="~/Pages/Sites/SiteTransactions.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink42" NavigateUrl="~/Pages/Sites/SiteTransactions.aspx">
                                         <span>Site Transactions</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink41" NavigateUrl="~/Pages/Sites/SiteReports.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink46" NavigateUrl="~/Pages/Sites/SiteReports.aspx">
                                                     <span>Site Reports</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                    </asp:HyperLink>
+                                </li>
+                            </ul>
                         </li>
-                        <%--                    <li class="stick bg-darkCobalt fg-white">
-                        <a href="#" class="dropdown-toggle"><span class="mif-users icon"></span>&nbspHuman Resources</a>
-                        <div class="m-menu-container" data-role="dropdown" data-no-close="true">
-                            <div class="grid no-margin">
-                                <div class="row cells5">
-                                    <div class="cell padding10">
-                                        <div class="image-container bordered handing ani image-format-hd">
-                                            <div class="frame">
-                                                <asp:Image runat="server" ID="Image5" Width="150" Height="150" ImageUrl="~/Images/hr.jpg" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell colspan2">
-                                        <h2 class="fg-white text-bold text-shadow">Human Resources Management</h2>
-                                        <p class="padding20 no-padding-top no-padding-left no-padding-bottom fg-white">
-                                            This portion of the application helps you to manage your human resources.
-                                        </p>
-                                    </div>
-                                    <div class="cell colspan2">
-                                        <ul class="unstyled-list">
-                                            <li>
-                                                <h3 class="text-shadow">Choose desired task</h3>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cell colspan1">
-                                        <ul class="unstyled-list">
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Pages/HumanResources/NewStaffMember.aspx">
-                                        <span>New Staff Member</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="~/Pages/HumanResources/StaffAllocation.aspx">
-                                        <span>Staff Allocation</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="~/Pages/HumanResources/AllocationPlaces.aspx">
-                                        <span>Staff Allocation Places</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink5" NavigateUrl="~/Pages/HumanResources/SalariesDisbursement.aspx">
-                                        <span>Salaries Disbursement</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cell colspan1">
-                                        <ul class="unstyled-list">
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink6" NavigateUrl="#">
-                                        <span>Page</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink7" NavigateUrl="#">
-                                        <span>Page</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink8" NavigateUrl="#">
-                                        <span>Page</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="stick bg-darkCobalt fg-white">
-                        <a href="#" class="dropdown-toggle"><span class="mif-truck icon"></span>&nbspStore</a>
-                        <div class="m-menu-container" data-role="dropdown" data-no-close="true">
-                            <div class="grid no-margin">
-                                <div class="row cells5">
-                                    <div class="cell padding10">
-                                        <div class="image-container bordered handing ani image-format-hd">
-                                            <div class="frame">
-                                                <asp:Image runat="server" ID="Image2" Width="150" Height="150" ImageUrl="~/Images/storage.jpg" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="cell colspan2">
-                                        <h2 class="fg-white text-bold text-shadow">Stores Management</h2>
-                                        <p class="padding20 no-padding-top no-padding-left no-padding-bottom fg-white">
-                                            This portion of the application helps you to manage business inventory. Inventory means furniture, fixture, and tools which are kept by business for smooth running of its operations. Normally those items are contained in inventory who have some long physical life.
-                                        </p>
-                                    </div>
-                                    <div class="cell colspan2">
-                                        <ul class="unstyled-list">
-                                            <li>
-                                                <h3 class="text-shadow">Choose desired task</h3>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cell colspan1">
-                                        <ul class="unstyled-list">
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink29" NavigateUrl="~/Pages/Store/items.aspx">
-                                        <span>New Item</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink42" NavigateUrl="~/Pages/Store/locations.aspx">
-                                        <span>New Location</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink46" NavigateUrl="~/Pages/Store/transactions.aspx">
-                                        <span>Transactions</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cell colspan1">
-                                        <ul class="unstyled-list">
-                                            <li>
-                                                <asp:HyperLink runat="server" ID="HyperLink48" NavigateUrl="~/Pages/Store/reports.aspx">
-                                        <span>Reports</span>
-                                                </asp:HyperLink>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>--%>
-                        <li class="stick bg-darkCobalt fg-white">
-                            <a href="#" class="dropdown-toggle"><span class="mif-tools icon"></span>&nbspTasks</a>
-                            <div class="m-menu-container" data-role="dropdown" data-no-close="true">
-                                <div class="grid no-margin">
-                                    <div class="row cells5">
-                                        <div class="cell padding10">
-                                            <div class="image-container bordered handing ani image-format-hd">
-                                                <div class="frame">
-                                                    <asp:Image runat="server" ID="Image1" Width="150" Height="150" ImageUrl="~/Images/tasks.jpg" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cell colspan2">
-                                            <h2 class="fg-white text-bold text-shadow">Tasks Management</h2>
-                                            <p class="padding20 no-padding-top no-padding-left no-padding-bottom fg-white">
-                                                This portion of application helps you to do site related maintenance tasks.
-                                            </p>
-                                        </div>
-                                        <div class="cell colspan2">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <h3 class="text-shadow">Choose desired task</h3>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cell colspan1">
-                                            <ul class="unstyled-list">
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink31" NavigateUrl="~/Pages/Configurations/Backup.aspx">
+                        <li>
+                            <a href="" class="dropdown-toggle">Hamdard</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/NotForProfit/AddBeneficiries.aspx">
+                                                    <span>New Beneficiary</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Pages/NotForProfit/viewBeneficiaries.aspx">
+                                                    <span>View Beneficiaries</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="~/Pages/NotForProfit/newEvent.aspx">
+                                                    <span>New Event</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="~/Pages/NotForProfit/beneficiariesToEvent.aspx">
+                                                    <span>Add Beneficiaries to Event</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink6" NavigateUrl="~/Pages/NotForProfit/FinalizeEvent.aspx">
+                                                    <span>Finalize Event</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink5" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
+                                                    <span>Reports</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li><a href="" class="dropdown-toggle">Other Products</a>
+                                    <ul class="d-menu" data-role="dropdown">
+                                        <li><a href="">Internet Explorer 10</a></li>
+                                        <li><a href="">Skype</a></li>
+                                        <li><a href="">Surface</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle">Tasks</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink47" NavigateUrl="~/Pages/Configurations/Backup.aspx">
                                         <span>Take Backup</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink12" NavigateUrl="~/Pages/Membership/UserRoles.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink48" NavigateUrl="~/Pages/Membership/UserRoles.aspx">
                                         <span>User Role</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink13" NavigateUrl="~/Pages/Membership/NewUser.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink49" NavigateUrl="~/Pages/Membership/NewUser.aspx">
                                         <span>New User</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink14" NavigateUrl="~/Pages/Membership/UpdateUser.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink50" NavigateUrl="~/Pages/Membership/UpdateUser.aspx">
                                         <span>Update User</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                                <li>
-                                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/Membership/Logout.aspx">
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink51" NavigateUrl="~/Pages/Membership/Logout.aspx">
                                         <span>Logout</span>
-                                                    </asp:HyperLink>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="cell colspan1">
-                                            <ul class="unstyled-list">
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="place-right no-hovered">
-                            <div class="input-control text">
-                                <span class="mif-user prepend-icon"></span>
-                                <asp:TextBox ID="TextBox1" runat="server" BorderStyle="None" ReadOnly="true" Text="Simple Text"></asp:TextBox>
-                            </div>
+                                    </asp:HyperLink>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="row cells12">
-                    <asp:ContentPlaceHolder ID="bodyContents" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-                <div class="row cells12">
-                    <div class="cell colspan12 bg-darkCobalt fg-white">
-                        <address class="align-center">
-                            <strong><%=Session["companyName"].ToString() %></strong><br />
-                            <%=Session["companyAddress"].ToString() %><br />
-                            <%=Session["companyContacts"].ToString() %><br />
-                            <%=Session["companyWebsite"].ToString() + " | " + Session["companyEmail"].ToString() %>
-                            <br />
-                        </address>
-                    </div>
+
+            </div>
+            <div class="row cells12">
+                <asp:ContentPlaceHolder ID="bodyContents" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="row cells12">
+                <div class="cell colspan12 bg-darkCobalt fg-white">
+                    <address class="align-center">
+                        <strong><%=Session["companyName"].ToString() %></strong><br />
+                        <%=Session["companyAddress"].ToString() %><br />
+                        <%=Session["companyContacts"].ToString() %><br />
+                        <%=Session["companyWebsite"].ToString() + " | " + Session["companyEmail"].ToString() %>
+                        <br />
+                    </address>
                 </div>
             </div>
+        </div>
     </form>
 </body>
 </html>

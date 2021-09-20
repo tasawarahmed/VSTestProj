@@ -42,10 +42,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClosedXML">
-      <HintPath>..\..\..\..\Desktop\ICS\ClosedXML.dll</HintPath>
+      <HintPath>Logic\ClosedXML.dll</HintPath>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml">
-      <HintPath>..\..\..\..\Desktop\ICS\DocumentFormat.OpenXml.dll</HintPath>
+      <HintPath>Logic\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -224,6 +224,10 @@
     <Content Include="Pages\Membership\UpdateUser.aspx" />
     <Content Include="Pages\Membership\UserRoles.aspx" />
     <Content Include="Pages\NotForProfit\AddBeneficiries.aspx" />
+    <Content Include="Pages\NotForProfit\beneficiariesToEvent.aspx" />
+    <Content Include="Pages\NotForProfit\FinalizeEvent.aspx" />
+    <Content Include="Pages\NotForProfit\NewEvent.aspx" />
+    <Content Include="Pages\NotForProfit\Reports.aspx" />
     <Content Include="Pages\NotForProfit\viewBeneficiaries.aspx" />
     <Content Include="Pages\Sites\NewSite.aspx" />
     <Content Include="Pages\Sites\Regions.aspx" />
@@ -571,12 +575,40 @@
     <Compile Include="Pages\NotForProfit\AddBeneficiries.aspx.designer.cs">
       <DependentUpon>AddBeneficiries.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NotForProfit\beneficiariesToEvent.aspx.cs">
+      <DependentUpon>beneficiariesToEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\beneficiariesToEvent.aspx.designer.cs">
+      <DependentUpon>beneficiariesToEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\FinalizeEvent.aspx.cs">
+      <DependentUpon>FinalizeEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\FinalizeEvent.aspx.designer.cs">
+      <DependentUpon>FinalizeEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\NewEvent.aspx.cs">
+      <DependentUpon>NewEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\NewEvent.aspx.designer.cs">
+      <DependentUpon>NewEvent.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NotForProfit\NotForProfit.master.cs">
       <DependentUpon>NotForProfit.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\NotForProfit\NotForProfit.master.designer.cs">
       <DependentUpon>NotForProfit.master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\NotForProfit\viewBeneficiaries.aspx.cs">
       <DependentUpon>viewBeneficiaries.aspx</DependentUpon>
@@ -823,7 +855,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Code\" />
+    <Folder Include="Old_App_Code\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
