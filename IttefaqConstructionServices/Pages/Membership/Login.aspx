@@ -14,12 +14,11 @@
     <meta name="author" content="Sergey Pimenov and Metro UI CSS contributors">
     <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon">
     <title>Login form</title>
-    <script src="../../CSS/jquery.js"></script>
-    <script src="../../CSS/jquery-2.1.3.min.js"></script>
-    <script src="../../CSS/metro.js"></script>
-    <link href="../../CSS/metro.css" rel="stylesheet" />
-    <link href="../../CSS/metro-icons.css" rel="stylesheet" />
-    <link href="../../CSS/metro-responsive.css" rel="stylesheet" />
+    <script src="../../Metro-UI-CSS-master/test/RequireJS/scripts/jquery-2.1.3.min.js"></script>
+    <script src="../../Metro-UI-CSS-master/test/RequireJS/scripts/metro.js"></script>
+    <link href="../../Metro-UI-CSS-master/build/css/metro.css" rel="stylesheet" />
+    <link href="../../Metro-UI-CSS-master/build/css/metro-icons.css" rel="stylesheet" />
+    <link href="../../Metro-UI-CSS-master/build/css/metro-responsive.css" rel="stylesheet" />
 
     <style>
         .login-form {
