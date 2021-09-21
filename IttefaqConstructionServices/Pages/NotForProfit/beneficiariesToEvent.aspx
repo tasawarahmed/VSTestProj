@@ -61,27 +61,35 @@
                 </asp:TemplateField>
                 <asp:TemplateField Visible="True" HeaderText="Name">
                     <EditItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("benefName") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label runat="server" ID="lblName" Text='<%# Bind("Name") %>' ></asp:Label>
+                        <asp:Label runat="server" ID="lblName" Text='<%# Bind("benefName") %>' ></asp:Label>
                         <%--                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>--%>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField Visible="True" HeaderText="Address">
                     <EditItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Address") %>'></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("address") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="lblAddress" runat="server" Text='<%# Bind("Address") %>'></asp:Label>
+                        <asp:Label ID="lblAddress" runat="server" Text='<%# Bind("address") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField Visible="True" HeaderText="Address">
                     <EditItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Address") %>'></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("city") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="lblCity" runat="server" Text='<%# Bind("City") %>'></asp:Label>
+                        <asp:Label ID="lblCity" runat="server" Text='<%# Bind("city") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField Visible="True" HeaderText="Benefits History">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("benefitHistory") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lblHistory" runat="server" Text='<%# Bind("benefitHistory") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

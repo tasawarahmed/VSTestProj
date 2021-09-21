@@ -41,19 +41,49 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             string dtQuery = string.Format("SELECT id AS id, name AS Name, address AS Address, city AS City FROM tblBeneficiaries {0}", criteria);
             DataTable dt = p.GetDataTable(dtQuery);
 
-            Gridview1.DataSource = dt;
-            Gridview1.DataBind();
+            //Gridview1.DataSource = dt;
+            //Gridview1.DataBind();
 
-            if (Gridview1.Rows.Count > 0)
+            List<Beneficiary> list = new List<Beneficiary>();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                refreshGrid();
+                DataRow dr = dt.Rows[i];
+                Beneficiary b = new Beneficiary();
+                int id = int.Parse(dr[0].ToString());
+                b.id = id;
+                b.benefName = dr[1].ToString();
+                b.address = dr[2].ToString();
+                b.city = dr[3].ToString();
+                b.benefitHistory = getBenefitHistory(id);
+                list.Add(b);
             }
+
+            Gridview1.DataSource = list;
+            Gridview1.DataBind();
         }
 
-        private void refreshGrid()
+        private string getBenefitHistory(int id)
         {
-            Gridview1.UseAccessibleHeader = true;
-            Gridview1.HeaderRow.TableSection = TableRowSection.TableHeader;
+            string benefits = string.Empty;
+
+            string benefitsQuery = string.Format("SELECT TOP (5) benefitGiven, eventMonthYear, nonMonetaryBenefits FROM tblGenBeneficiariesInEvents WHERE (beneficiaryID = {0}) ORDER BY eventMonthYear DESC", id);
+            DataTable dt = p.GetDataTable(benefitsQuery);
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow dr = dt.Rows[i];
+                int amount = (int) Decimal.Parse(dr[0].ToString());
+                string benefit = "<strong>" + dr[1].ToString() + "</strong>" +": Rs." + amount.ToString() + ", " + dr[2].ToString() + "; ";
+                benefits += benefit;
+            }
+
+            if (benefits != string.Empty)
+            {
+                benefits = benefits.Remove(benefits.Length - 2);
+            }
+            
+            return benefits;
         }
 
         protected void btnGetBeneficiaries_Click(object sender, EventArgs e)

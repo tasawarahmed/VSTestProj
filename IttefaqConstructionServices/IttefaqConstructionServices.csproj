@@ -227,7 +227,9 @@
     <Content Include="Pages\Membership\UserRoles.aspx" />
     <Content Include="Pages\NotForProfit\AddBeneficiries.aspx" />
     <Content Include="Pages\NotForProfit\beneficiariesToEvent.aspx" />
+    <Content Include="Pages\NotForProfit\Donations.aspx" />
     <Content Include="Pages\NotForProfit\FinalizeEvent.aspx" />
+    <Content Include="Pages\NotForProfit\NewDonor.aspx" />
     <Content Include="Pages\NotForProfit\NewEvent.aspx" />
     <Content Include="Pages\NotForProfit\Reports.aspx" />
     <Content Include="Pages\NotForProfit\viewBeneficiaries.aspx" />
@@ -584,12 +586,26 @@
     <Compile Include="Pages\NotForProfit\beneficiariesToEvent.aspx.designer.cs">
       <DependentUpon>beneficiariesToEvent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NotForProfit\Donations.aspx.cs">
+      <DependentUpon>Donations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\Donations.aspx.designer.cs">
+      <DependentUpon>Donations.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NotForProfit\FinalizeEvent.aspx.cs">
       <DependentUpon>FinalizeEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\NotForProfit\FinalizeEvent.aspx.designer.cs">
       <DependentUpon>FinalizeEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\NewDonor.aspx.cs">
+      <DependentUpon>NewDonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\NewDonor.aspx.designer.cs">
+      <DependentUpon>NewDonor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\NotForProfit\NewEvent.aspx.cs">
       <DependentUpon>NewEvent.aspx</DependentUpon>

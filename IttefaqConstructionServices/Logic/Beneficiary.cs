@@ -22,5 +22,7 @@ namespace IttefaqConstructionServices.Logic
         public bool hasHouse { get; set; }
         public string remarks { get; set; }
         public List<Family> familyMembers { get; set; }
+        public int id { get; set; }
+        public string benefitHistory { get; set; }
     }
 }
