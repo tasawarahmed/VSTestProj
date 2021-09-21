@@ -865,6 +865,7 @@
     <Content Include="Pages\Membership\MembershipMaster.master" />
     <Content Include="Pages\NotForProfit\NotForProfit.master" />
     <None Include="Properties\PublishProfiles\ICSPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Properties\PublishProfiles\PublishProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

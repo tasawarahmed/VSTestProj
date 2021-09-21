@@ -274,15 +274,22 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             clearLabels();
             try
             {
+                string cnic = p.FixString(txtCNIC.Text);
+
+                if (cnic.Length < 13)
+                {
+                    throw new Exception("Not seems to be a valid CNIC Number");
+                }
+
+                if (exists(cnic))
+                {
+                    throw new Exception("Beneficiary against given CNIC already exists");
+                }
+
                 if (cmbTitle.SelectedIndex > 0 && cmbEducation.SelectedIndex > 0 && cmbCity.SelectedIndex > 0 && cmbHouseStatus.SelectedIndex > 0 && cmbIstehqaqBasis.SelectedIndex > 0)
                 {
                     string title = p.FixString(cmbTitle.SelectedValue);
                     string name = p.FixString(txtBeneficiaryName.Text);
-                    string cnic = p.FixString(txtCNIC.Text);
-                    if (cnic.Length < 13)
-                    {
-                        throw new Exception("Not seems to be a valid CNIC Number");
-                    }
                     string education = cmbEducation.SelectedValue;
                     string educationFurtherDetails = p.FixString(txtFurtherEduDetails.Text);
                     string telephone = p.FixString(txtPhone.Text);
@@ -292,6 +299,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                     string status = cmbIstehqaqBasis.SelectedValue;
                     Decimal salary = Decimal.Parse (Validator.ValidatePositiveNumber(txtMonthlyIncome.Text, "Monthly Income"));
                     string sourceOfIncome = p.FixString(txtIncomeSource.Text);
+                    string fileNumber = p.FixString(txtFileReference.Text);
                     string specialIssue = p.FixString(txtSpecialIssue.Text);
                     bool hasHouse = (cmbHouseStatus.SelectedIndex == 1);
                     List<Family> familyList = getFamilyList("Normal");
@@ -327,10 +335,10 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                     string query = string.Format("INSERT INTO tblBeneficiaries " +
                         "(title, name, cnic, education, educationFurtherDetails, " +
                         "telephone, dateOfBirth, address, city, status, monthlyIncome, sourceOfIncome, " +
-                        " specialIssue, hasHouse, hasFather, hasMother, hasKids, totalFamilyMembers, remarks) VALUES" +
-                        "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},'{11}','{12}','{13}','{14}','{15}','{16}',{17},'{18}')",
+                        " specialIssue, hasHouse, hasFather, hasMother, hasKids, totalFamilyMembers, remarks, fileReference) VALUES" +
+                        "('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}',{10},'{11}','{12}','{13}','{14}','{15}','{16}',{17},'{18}', '{19}')",
                         title, name, cnic, education, educationFurtherDetails, telephone, dateOfBirth, address, city, status, salary, sourceOfIncome,
-                        specialIssue, hasHouse, hasFather, hasMother, hasKids, totalFamilyMembers, remarks);
+                        specialIssue, hasHouse, hasFather, hasMother, hasKids, totalFamilyMembers, remarks, fileNumber);
 
                     p.ExecuteQuery(query);
 
@@ -355,6 +363,21 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             {
                 showWarningMessage(ex.Message);
             }
+        }
+
+        private bool exists(string cnic)
+        {
+            bool result = false;
+            
+            string query = string.Format("SELECT name FROM tblBeneficiaries where cnic = '{0}'", cnic);
+            DataTable dt = p.GetDataTable(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                result = true;
+            }
+
+            return result;
         }
     }
 }

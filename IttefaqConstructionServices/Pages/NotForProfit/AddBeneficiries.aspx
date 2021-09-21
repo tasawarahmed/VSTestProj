@@ -232,6 +232,12 @@
         </div>
         <asp:Button runat="server" ID="btnSubmitPhoto" CssClass="button primary full-size" Text="Submit Photo" OnClick="btnSubmitPhoto_Click" />
         <hr />
+        <h4>For Office Use</h4>
+        <hr />
+            <div class="input-control text full-size">
+                <asp:TextBox runat="server" placeholder="Office File Reference" ID="txtFileReference"></asp:TextBox>
+            </div>
+        <hr />
         <asp:Button runat="server" ID="btnAddBeneficiary" CssClass="button primary full-size" Text="Add Beneficiary" OnClick="btnAddBeneficiary_Click" />
         <hr />
     </div>

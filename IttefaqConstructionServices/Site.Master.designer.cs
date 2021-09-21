@@ -31,256 +31,256 @@ namespace IttefaqConstructionServices {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// HyperLink18 control.
+        /// HyperLink9 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink18;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink9;
         
         /// <summary>
-        /// HyperLink19 control.
+        /// HyperLink10 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink19;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink10;
         
         /// <summary>
-        /// HyperLink20 control.
+        /// HyperLink11 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink20;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink11;
         
         /// <summary>
-        /// HyperLink21 control.
+        /// HyperLink12 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink21;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink12;
         
         /// <summary>
-        /// HyperLink22 control.
+        /// HyperLink13 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink22;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink13;
         
         /// <summary>
-        /// HyperLink23 control.
+        /// HyperLink14 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink23;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink14;
         
         /// <summary>
-        /// HyperLink24 control.
+        /// HyperLink15 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink24;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink15;
         
         /// <summary>
-        /// HyperLink25 control.
+        /// HyperLink16 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink25;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink16;
         
         /// <summary>
-        /// HyperLink26 control.
+        /// HyperLink17 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink26;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink17;
         
         /// <summary>
-        /// HyperLink27 control.
+        /// HyperLink28 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink27;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink28;
         
         /// <summary>
-        /// HyperLink29 control.
+        /// HyperLink31 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink29;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink31;
         
         /// <summary>
-        /// HyperLink30 control.
+        /// HyperLink33 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink30;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink33;
         
         /// <summary>
-        /// HyperLink32 control.
+        /// HyperLink34 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink32;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink34;
         
         /// <summary>
-        /// HyperLink42 control.
+        /// HyperLink35 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink42;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink35;
         
         /// <summary>
-        /// HyperLink46 control.
+        /// HyperLink36 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink46;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink36;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// HyperLink37 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink37;
         
         /// <summary>
-        /// HyperLink2 control.
+        /// HyperLink38 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink38;
         
         /// <summary>
-        /// HyperLink7 control.
+        /// HyperLink39 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink7;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink39;
         
         /// <summary>
-        /// HyperLink8 control.
+        /// HyperLink40 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink8;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink40;
         
         /// <summary>
-        /// HyperLink3 control.
+        /// HyperLink41 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink41;
         
         /// <summary>
-        /// HyperLink4 control.
+        /// HyperLink43 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink43;
         
         /// <summary>
-        /// HyperLink6 control.
+        /// HyperLink44 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink6;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink44;
         
         /// <summary>
-        /// HyperLink5 control.
+        /// HyperLink45 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink5;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink45;
         
         /// <summary>
-        /// HyperLink47 control.
+        /// HyperLink52 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink47;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink52;
         
         /// <summary>
-        /// HyperLink48 control.
+        /// HyperLink53 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink48;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink53;
         
         /// <summary>
-        /// HyperLink49 control.
+        /// HyperLink54 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink49;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink54;
         
         /// <summary>
-        /// HyperLink50 control.
+        /// HyperLink55 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink50;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink55;
         
         /// <summary>
-        /// HyperLink51 control.
+        /// HyperLink56 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink51;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink56;
         
         /// <summary>
         /// bodyContents control.

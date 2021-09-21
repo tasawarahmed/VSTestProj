@@ -48,44 +48,44 @@
     <form id="form1" runat="server" data-role="validator" data-hint-mode="line">
         <div class="grid">
             <div class="row cells12">
-                <div class="app-bar fixed-top">
-                    <a class="app-bar-element bg-black" href="#"><%=Session["companyAbbr"].ToString() %></a>
-                    <span class="app-bar-divider"></span>
+                <div class="app-bar fixed-top" data-role="appbar">
+
+                    <a class="app-bar-element branding"><%=Session["companyAbbr"].ToString() %></a>
+
                     <ul class="app-bar-menu">
-                        <li><a href="#">Welcome! <%=Session["UserName"].ToString() %></a></li>
                         <li>
-                            <a href="#" class="dropdown-toggle">General Accounts</a>
+                            <a href="" class="dropdown-toggle">General Accounts</a>
                             <ul class="d-menu" data-role="dropdown">
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink18" NavigateUrl="~/Pages/Accounts/NewAccount.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink9" NavigateUrl="~/Pages/Accounts/NewAccount.aspx">
                                         <span>New Account</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink19" NavigateUrl="~/Pages/Accounts/Transactions.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink10" NavigateUrl="~/Pages/Accounts/Transactions.aspx">
                                         <span>Transactions</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink20" NavigateUrl="~/Pages/Accounts/GeneralTransactions.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink11" NavigateUrl="~/Pages/Accounts/GeneralTransactions.aspx">
                                         <span>Most Frequent Transactions</span>
                                     </asp:HyperLink></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink21" NavigateUrl="~/Pages/Accounts/Status.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink12" NavigateUrl="~/Pages/Accounts/Status.aspx">
                                         <span>Account Status</span>
                                     </asp:HyperLink></li>
                                 <li class="divider"></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink22" NavigateUrl="~/Pages/Accounts/Reports.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink13" NavigateUrl="~/Pages/Accounts/Reports.aspx">
                                                     <span>Summary Reports</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink23" NavigateUrl="~/Pages/Accounts/OtherReports.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink14" NavigateUrl="~/Pages/Accounts/OtherReports.aspx">
                                                     <span>Other Reports</span>
                                     </asp:HyperLink></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink24" NavigateUrl="~/Pages/Accounts/SiteLiabAssociationWithPM.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink15" NavigateUrl="~/Pages/Accounts/SiteLiabAssociationWithPM.aspx">
                                                     <span>Site Liab to PMs</span>
                                     </asp:HyperLink></li>
                             </ul>
@@ -94,43 +94,43 @@
                             <a href="" class="dropdown-toggle">Sites</a>
                             <ul class="d-menu" data-role="dropdown">
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink25" NavigateUrl="~/Pages/Sites/NewSite.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink16" NavigateUrl="~/Pages/Sites/NewSite.aspx">
                                         <span>New Site</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink26" NavigateUrl="~/Pages/Sites/Regions.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink17" NavigateUrl="~/Pages/Sites/Regions.aspx">
                                         <span>New Region</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink27" NavigateUrl="~/Pages/Sites/subregions.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink28" NavigateUrl="~/Pages/Sites/subregions.aspx">
                                         <span>Sub Regions</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink29" NavigateUrl="~/Pages/Sites/SiteStatus.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink31" NavigateUrl="~/Pages/Sites/SiteStatus.aspx">
                                         <span>Site Status</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink30" NavigateUrl="~/Pages/Sites/SiteDemands.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink33" NavigateUrl="~/Pages/Sites/SiteDemands.aspx">
                                         <span>Site Demands</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink32" NavigateUrl="~/Pages/Sites/SiteAccounts.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink34" NavigateUrl="~/Pages/Sites/SiteAccounts.aspx">
                                         <span>Site Accounts</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink42" NavigateUrl="~/Pages/Sites/SiteTransactions.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink35" NavigateUrl="~/Pages/Sites/SiteTransactions.aspx">
                                         <span>Site Transactions</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink46" NavigateUrl="~/Pages/Sites/SiteReports.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink36" NavigateUrl="~/Pages/Sites/SiteReports.aspx">
                                                     <span>Site Reports</span>
                                     </asp:HyperLink>
                                 </li>
@@ -140,45 +140,45 @@
                             <a href="" class="dropdown-toggle">Hamdard</a>
                             <ul class="d-menu" data-role="dropdown">
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/NotForProfit/AddBeneficiries.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink37" NavigateUrl="~/Pages/NotForProfit/AddBeneficiries.aspx">
                                                     <span>New Beneficiary</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Pages/NotForProfit/viewBeneficiaries.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink38" NavigateUrl="~/Pages/NotForProfit/viewBeneficiaries.aspx">
                                                     <span>View Beneficiaries</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink7" NavigateUrl="~/Pages/NotForProfit/NewDonor.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink39" NavigateUrl="~/Pages/NotForProfit/NewDonor.aspx">
                                                     <span>New Donor</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink8" NavigateUrl="~/Pages/NotForProfit/Donations.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink40" NavigateUrl="~/Pages/NotForProfit/Donations.aspx">
                                                     <span>Receive Donations</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="~/Pages/NotForProfit/newEvent.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink41" NavigateUrl="~/Pages/NotForProfit/newEvent.aspx">
                                                     <span>New Event</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="~/Pages/NotForProfit/beneficiariesToEvent.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink43" NavigateUrl="~/Pages/NotForProfit/beneficiariesToEvent.aspx">
                                                     <span>Add Beneficiaries to Event</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink6" NavigateUrl="~/Pages/NotForProfit/FinalizeEvent.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink44" NavigateUrl="~/Pages/NotForProfit/FinalizeEvent.aspx">
                                                     <span>Finalize Event</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink5" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink45" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
                                                     <span>Reports</span>
                                     </asp:HyperLink>
                                 </li>
@@ -191,31 +191,34 @@
                                 </li>
                             </ul>
                         </li>
+                    </ul>
+                    <div class="app-bar-pullbutton automatic"></div>
+                    <ul class="app-bar-menu place-right" data-flexdirection="reverse">
                         <li>
-                            <a href="#" class="dropdown-toggle">Tasks</a>
+                            <a href="" class="dropdown-toggle"><span class="mif-user icon"></span>&nbsp Welcome! <%=Session["UserName"].ToString() %></a>
                             <ul class="d-menu" data-role="dropdown">
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink47" NavigateUrl="~/Pages/Configurations/Backup.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink52" NavigateUrl="~/Pages/Configurations/Backup.aspx">
                                         <span>Take Backup</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink48" NavigateUrl="~/Pages/Membership/UserRoles.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink53" NavigateUrl="~/Pages/Membership/UserRoles.aspx">
                                         <span>User Role</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink49" NavigateUrl="~/Pages/Membership/NewUser.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink54" NavigateUrl="~/Pages/Membership/NewUser.aspx">
                                         <span>New User</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink50" NavigateUrl="~/Pages/Membership/UpdateUser.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink55" NavigateUrl="~/Pages/Membership/UpdateUser.aspx">
                                         <span>Update User</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink51" NavigateUrl="~/Pages/Membership/Logout.aspx">
+                                    <asp:HyperLink runat="server" ID="HyperLink56" NavigateUrl="~/Pages/Membership/Logout.aspx">
                                         <span>Logout</span>
                                     </asp:HyperLink>
                                 </li>
@@ -223,6 +226,8 @@
                         </li>
                     </ul>
                 </div>
+
+
 
             </div>
             <div class="row cells12">
