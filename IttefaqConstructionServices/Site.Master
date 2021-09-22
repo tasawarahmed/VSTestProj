@@ -177,16 +177,23 @@
                                     </asp:HyperLink>
                                 </li>
                                 <li class="divider"></li>
+                                <li><a href="" class="dropdown-toggle">Reports</a>
+                                    <ul class="d-menu" data-role="dropdown">
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink45" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
-                                                    <span>Reports</span>
+                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
+                                                    <span>Report A</span>
                                     </asp:HyperLink>
                                 </li>
-                                <li><a href="" class="dropdown-toggle">Other Products</a>
-                                    <ul class="d-menu" data-role="dropdown">
-                                        <li><a href="">Internet Explorer 10</a></li>
-                                        <li><a href="">Skype</a></li>
-                                        <li><a href="">Surface</a></li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
+                                                    <span>Report B</span>
+                                    </asp:HyperLink>
+                                </li>
+                                <li>
+                                    <asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
+                                                    <span>Report C</span>
+                                    </asp:HyperLink>
+                                </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -199,27 +206,27 @@
                             <ul class="d-menu" data-role="dropdown">
                                 <li>
                                     <asp:HyperLink runat="server" ID="HyperLink52" NavigateUrl="~/Pages/Configurations/Backup.aspx">
-                                        <span>Take Backup</span>
+                                        <span><span class="mif-database icon"></span>&nbsp Take Backup</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
                                     <asp:HyperLink runat="server" ID="HyperLink53" NavigateUrl="~/Pages/Membership/UserRoles.aspx">
-                                        <span>User Role</span>
+                                        <span><span class="mif-wrench icon"></span>&nbsp User Role</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
                                     <asp:HyperLink runat="server" ID="HyperLink54" NavigateUrl="~/Pages/Membership/NewUser.aspx">
-                                        <span>New User</span>
+                                        <span><span class="mif-user-plus icon"></span>&nbsp New User</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
                                     <asp:HyperLink runat="server" ID="HyperLink55" NavigateUrl="~/Pages/Membership/UpdateUser.aspx">
-                                        <span>Update User</span>
+                                        <span><span class="mif-user-check icon"></span>&nbsp Update User</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
                                     <asp:HyperLink runat="server" ID="HyperLink56" NavigateUrl="~/Pages/Membership/Logout.aspx">
-                                        <span>Logout</span>
+                                        <span><span class="mif-exit icon"></span>&nbsp Logout</span>
                                     </asp:HyperLink>
                                 </li>
                             </ul>
