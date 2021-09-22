@@ -58,6 +58,15 @@ namespace IttefaqConstructionServices.Pages.NotForProfit {
         protected global::System.Web.UI.WebControls.TextBox txtAmount;
         
         /// <summary>
+        /// gridAccounts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridAccounts;
+        
+        /// <summary>
         /// btnEventCreate control.
         /// </summary>
         /// <remarks>
@@ -65,5 +74,23 @@ namespace IttefaqConstructionServices.Pages.NotForProfit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEventCreate;
+        
+        /// <summary>
+        /// gridDonations control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridDonations;
+        
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

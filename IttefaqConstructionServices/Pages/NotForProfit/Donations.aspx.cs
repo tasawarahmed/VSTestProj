@@ -1,6 +1,7 @@
 ﻿using IttefaqConstructionServices.Logic;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,7 +17,19 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             if (!IsPostBack)
             {
                 loadDonors();
+                bindAccountsGrid();
             }
+        }
+
+        private void bindAccountsGrid()
+        {
+            string query = "SELECT id FROM tblGenAccounts WHERE (accountName = 'Income From Donations')";
+            int id = p.getAccountID(query);
+
+            string ddQuery = string.Format("SELECT accountName AS Name, id FROM tblGenAccounts WHERE parentAccountID = {0} ORDER BY accountName ", id);
+            DataTable dt = p.GetDataTable(ddQuery);
+            gridAccounts.DataSource = dt;
+            gridAccounts.DataBind();
         }
 
         private void loadDonors()
