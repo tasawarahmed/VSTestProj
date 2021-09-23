@@ -12,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace IttefaqConstructionServices.Pages.NotForProfit
 {
-    public partial class viewBeneficiaries : System.Web.UI.Page
+    public partial class ViewBeneficiaryNew : System.Web.UI.Page
     {
         Utilities p = new Utilities();
         Dictionary<string, object> photos = new Dictionary<string, object>();
@@ -32,34 +32,34 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
 
         private void dataBindPhotos()
         {
-            string imageSrc = string.Empty;
-            string query = "SELECT benefID, photo FROM tblBeneficiaryPhoto  WHERE (id = '')";
+            //string imageSrc = string.Empty;
+            //string query = "SELECT benefID, photo FROM tblBeneficiaryPhoto WHERE (id = '')";
             //string dtQuery = ("SELECT tblBeneficiaryPhoto.photo AS [Photo], tblBeneficiaryPhoto.benefID AS [id], tblBeneficiaries.name AS [Name], tblBeneficiaries.address AS [Address], tblBeneficiaries.city AS [City] FROM tblBeneficiaryPhoto INNER JOIN tblBeneficiaries ON tblBeneficiaryPhoto.benefID = tblBeneficiaries.id");
-            string dtQuery = ("SELECT id AS id, name AS Name, address AS Address, city AS City FROM tblBeneficiaries");
-            photos = p.getIntObjectDictionary(query);
+            string dtQuery = ("SELECT id AS id, name AS Name, cnic, address AS Address, city AS City FROM tblBeneficiaries");
+            //photos = p.getIntObjectDictionary(query);
             DataTable dt = p.GetDataTable(dtQuery);
             gridPhotos.DataSource = dt;
             gridPhotos.DataBind();
 
-            for (int i = 0; i < gridPhotos.Rows.Count; i++)
-            {
-                Label lName = (Label)gridPhotos.Rows[i].FindControl("lblID");
-                string id = lName.Text;
-                object data = new object();
-                if (photos.TryGetValue(id, out data))
-                {
-                    byte[] bytesPhoto = (byte[])data;
-                    string base64Photo = Convert.ToBase64String(bytesPhoto);
-                    imageSrc = "data:image/jpeg; base64," + base64Photo;
-                }
-                else
-                {
-                    imageSrc = p.getImageSourceOfDefaultPhoto();
-                }
+            //for (int i = 0; i < gridPhotos.Rows.Count; i++)
+            //{
+            //    Label lName = (Label)gridPhotos.Rows[i].FindControl("lblID");
+            //    string id = lName.Text;
+            //    object data = new object();
+            //    if (photos.TryGetValue(id, out data))
+            //    {
+            //        byte[] bytesPhoto = (byte[])data;
+            //        string base64Photo = Convert.ToBase64String(bytesPhoto);
+            //        imageSrc = "data:image/jpeg; base64," + base64Photo;
+            //    }
+            //    else
+            //    {
+            //        imageSrc = p.getImageSourceOfDefaultPhoto();
+            //    }
 
-                HtmlImage image = (HtmlImage)gridPhotos.Rows[i].FindControl("dbImage");
-                image.Src = imageSrc;
-            }
+            //    HtmlImage image = (HtmlImage)gridPhotos.Rows[i].FindControl("dbImage");
+            //    image.Src = imageSrc;
+            //}
 
             refreshGrid();
         }
@@ -72,19 +72,34 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
 
         protected void gridPhotos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            pnlDetails.Visible = 
+            pnlDetails.Visible =
+                pnlBenefits.Visible = 
                 pnlFamilyDetails.Visible = false;
             try
             {
                 int benefID = int.Parse(e.CommandArgument.ToString());
                 showBeneficiary(benefID);
-                pnlDetails.Visible = true;
+                showBenefits(benefID);
+                pnlDetails.Visible = 
+                    pnlBenefits.Visible = true;
                 refreshGrid();
             }
             catch (Exception ex)
             {
                 //showWarningMessage(ex.Message);
             }
+        }
+
+        private void showBenefits(int benefID)
+        {
+            gridBenefits.DataSource = null;
+            gridBenefits.DataBind();
+
+            string query = string.Format("SELECT tblGenEvents.eventName AS event, tblGenBeneficiariesInEvents.eventMonthYear AS date, tblGenBeneficiariesInEvents.benefitGiven AS money, tblGenBeneficiariesInEvents.nonMonetaryBenefits AS others FROM tblGenBeneficiariesInEvents INNER JOIN tblGenEvents ON tblGenBeneficiariesInEvents.eventID = tblGenEvents.id WHERE (tblGenBeneficiariesInEvents.beneficiaryID = {0}) ORDER BY tblGenBeneficiariesInEvents.eventMonthYear DESC", benefID);
+            DataTable dt = p.GetDataTable(query);
+
+            gridBenefits.DataSource = dt;
+            gridBenefits.DataBind();
         }
 
         private void showBeneficiary(int id)
@@ -154,7 +169,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                     members.Add(f);
                 }
             }
-                return members;
+            return members;
         }
 
         private void viewPhoto(int id)

@@ -50,7 +50,7 @@
             <div class="row cells12">
                 <div class="app-bar fixed-top" data-role="appbar">
 
-                    <a class="app-bar-element branding"><%=Session["companyAbbr"].ToString() %></a>
+                    <asp:HyperLink runat="server" class="app-bar-element branding" NavigateUrl="~/default.aspx" ><%=Session["companyAbbr"].ToString() %></asp:HyperLink>
 
                     <ul class="app-bar-menu">
                         <li>
@@ -84,12 +84,13 @@
                                     <asp:HyperLink runat="server" ID="HyperLink14" NavigateUrl="~/Pages/Accounts/OtherReports.aspx">
                                                     <span>Other Reports</span>
                                     </asp:HyperLink></li>
-                                <li>
+<%--                                <li>
                                     <asp:HyperLink runat="server" ID="HyperLink15" NavigateUrl="~/Pages/Accounts/SiteLiabAssociationWithPM.aspx">
                                                     <span>Site Liab to PMs</span>
-                                    </asp:HyperLink></li>
+                                    </asp:HyperLink></li>--%>
                             </ul>
                         </li>
+<%--Sites excluded from Hamdard System
                         <li>
                             <a href="" class="dropdown-toggle">Sites</a>
                             <ul class="d-menu" data-role="dropdown">
@@ -135,7 +136,7 @@
                                     </asp:HyperLink>
                                 </li>
                             </ul>
-                        </li>
+                        </li>--%>
                         <li>
                             <a href="" class="dropdown-toggle">Hamdard</a>
                             <ul class="d-menu" data-role="dropdown">
@@ -145,8 +146,8 @@
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink38" NavigateUrl="~/Pages/NotForProfit/viewBeneficiaries.aspx">
-                                                    <span>View Beneficiaries</span>
+                                    <asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="~/Pages/NotForProfit/DeactivateBeneficiary.aspx">
+                                                    <span>Deactivate - Reactivate</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li class="divider"></li>
@@ -180,13 +181,13 @@
                                 <li><a href="" class="dropdown-toggle">Reports</a>
                                     <ul class="d-menu" data-role="dropdown">
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
-                                                    <span>Report A</span>
+                                    <asp:HyperLink runat="server" ID="HyperLink38" NavigateUrl="~/Pages/NotForProfit/viewBeneficiarynew.aspx">
+                                                    <span>Beneficiries - All</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Pages/NotForProfit/Reports.aspx">
-                                                    <span>Report B</span>
+                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Pages/NotForProfit/viewBeneficiaryEvent.aspx">
+                                                    <span>Beneficiries - Event</span>
                                     </asp:HyperLink>
                                 </li>
                                 <li>

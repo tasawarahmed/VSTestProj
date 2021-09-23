@@ -56,6 +56,7 @@
         <div class="input-control select full-size">
             <asp:DropDownList runat="server" ID="cmbCity">
                 <asp:ListItem>Select One</asp:ListItem>
+                <asp:ListItem>Badrashi</asp:ListItem>
                 <asp:ListItem>Lahore</asp:ListItem>
                 <asp:ListItem>Peshawar</asp:ListItem>
                 <asp:ListItem>Nowshera</asp:ListItem>

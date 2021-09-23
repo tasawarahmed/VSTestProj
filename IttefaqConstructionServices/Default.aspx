@@ -218,7 +218,7 @@ PAGE LAYOUT VERSION 2
 <%-----------------------
 PAGE LAYOUT VERSION 1
 -----------------------%>
-    <div class="cell colspan12">
+<%--    <div class="cell colspan12">
         <h1 class="leader"><%=Session["companyName"].ToString() %> - Accounts Management</h1>
         <hr />
         <br />
@@ -254,6 +254,14 @@ PAGE LAYOUT VERSION 1
                 <br />
             </li>
         </ul>
+    </div>--%>
+<%-----------------------
+PAGE LAYOUT Hamdard
+-----------------------%>
+    <div class="cell colspan12">
+        <h1 class="leader"><%=Session["companyName"].ToString() %> - Accounts Management</h1>
+        <hr />
+        <br />
     </div>
 
 </asp:Content>

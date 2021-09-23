@@ -227,12 +227,15 @@
     <Content Include="Pages\Membership\UserRoles.aspx" />
     <Content Include="Pages\NotForProfit\AddBeneficiries.aspx" />
     <Content Include="Pages\NotForProfit\beneficiariesToEvent.aspx" />
+    <Content Include="Pages\NotForProfit\DeactivateBeneficiary.aspx" />
     <Content Include="Pages\NotForProfit\Donations.aspx" />
     <Content Include="Pages\NotForProfit\FinalizeEvent.aspx" />
     <Content Include="Pages\NotForProfit\NewDonor.aspx" />
     <Content Include="Pages\NotForProfit\NewEvent.aspx" />
     <Content Include="Pages\NotForProfit\Reports.aspx" />
     <Content Include="Pages\NotForProfit\viewBeneficiaries.aspx" />
+    <Content Include="Pages\NotForProfit\viewBeneficiaryEvent.aspx" />
+    <Content Include="Pages\NotForProfit\ViewBeneficiaryNew.aspx" />
     <Content Include="Pages\Sites\NewSite.aspx" />
     <Content Include="Pages\Sites\Regions.aspx" />
     <Content Include="Pages\Sites\SiteAccounts.aspx" />
@@ -586,6 +589,13 @@
     <Compile Include="Pages\NotForProfit\beneficiariesToEvent.aspx.designer.cs">
       <DependentUpon>beneficiariesToEvent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NotForProfit\DeactivateBeneficiary.aspx.cs">
+      <DependentUpon>DeactivateBeneficiary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\DeactivateBeneficiary.aspx.designer.cs">
+      <DependentUpon>DeactivateBeneficiary.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\NotForProfit\Donations.aspx.cs">
       <DependentUpon>Donations.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -634,6 +644,20 @@
     </Compile>
     <Compile Include="Pages\NotForProfit\viewBeneficiaries.aspx.designer.cs">
       <DependentUpon>viewBeneficiaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\viewBeneficiaryEvent.aspx.cs">
+      <DependentUpon>viewBeneficiaryEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\viewBeneficiaryEvent.aspx.designer.cs">
+      <DependentUpon>viewBeneficiaryEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\ViewBeneficiaryNew.aspx.cs">
+      <DependentUpon>ViewBeneficiaryNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\ViewBeneficiaryNew.aspx.designer.cs">
+      <DependentUpon>ViewBeneficiaryNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Sites\NewSite.aspx.cs">
       <DependentUpon>NewSite.aspx</DependentUpon>
