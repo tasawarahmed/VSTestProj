@@ -14,7 +14,11 @@
             }
             var tb = document.getElementById("<%= txtCount.ClientID %>");
             tb.value = numChecked;
-            //alert(numChecked);
+
+            if (numChecked % 10 == 0)
+            {
+                alert('Total beneficiaries selected: ' + numChecked);
+            }
         }
     </script>
 </asp:Content>

@@ -16,8 +16,18 @@
         <asp:Panel runat="server" ID="pnlDetails" Visible="false">
             <div id="pDiv1">
                 <h1><%= eventName %></h1>
+                <h3>(The event was held in <%= eventPlace %> Under <%= eventHead %>. <%= eventStatus %>)</h3>
                 <h2>Registered Beneficiaries (Total: <%= totalBeneficiaries %>)</h2>
-                <asp:GridView runat="server" ID="gridBeneficiaries" CssClass="table striped hovered border bordered"></asp:GridView>
+                <asp:GridView runat="server" ID="gridBeneficiaries" AutoGenerateColumns="False" CssClass="table striped hovered border bordered">
+                    <Columns>
+                        <asp:BoundField DataField="Name" HeaderText="Name" />
+                        <asp:BoundField DataField="CNIC" HeaderText="CNIC" />
+                        <asp:BoundField DataField="Contact" HeaderText="Contact" />
+                        <asp:BoundField DataField="Address" HeaderText="Address" />
+                        <asp:BoundField DataField="City" HeaderText="City" />
+                        <asp:BoundField HeaderText="Attendance Status" />
+                    </Columns>
+                </asp:GridView>
             </div>
             <asp:Button runat="server" ID="Button1" CssClass="button primary full-size" Text="Print Details" OnClientClick="printDiv('pDiv1')" />
         </asp:Panel>

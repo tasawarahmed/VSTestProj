@@ -14,6 +14,10 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
         Utilities p = new Utilities();
         public string eventName = string.Empty;
         public string totalBeneficiaries = string.Empty;
+        public string eventPlace = string.Empty;
+        public string eventHead = string.Empty;
+        public string eventStatus = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -46,10 +50,27 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 {
                     int eventID = int.Parse(cmbEvent.SelectedValue);
                     eventName = cmbEvent.SelectedItem.ToString();
-                    string query = string.Format("SELECT tblBeneficiaries.name AS Name, tblBeneficiaries.cnic AS CNIC, tblBeneficiaries.telephone AS Contact, tblBeneficiaries.address AS Address, tblBeneficiaries.city AS City FROM tblGenBeneficiariesInEvents INNER JOIN tblBeneficiaries ON tblGenBeneficiariesInEvents.beneficiaryID = tblBeneficiaries.id WHERE tblGenBeneficiariesInEvents.eventID = {0} ORDER BY tblGenBeneficiariesInEvents.beneficiaryID ", eventID);
+                    string query = string.Format("SELECT tblBeneficiaries.name AS Name, tblBeneficiaries.cnic AS CNIC, tblBeneficiaries.telephone AS Contact, tblBeneficiaries.address AS Address, tblBeneficiaries.city AS City, tblGenEvents.eventPlace, tblGenAccounts.accountName, tblGenEvents.isFinalized FROM tblGenBeneficiariesInEvents INNER JOIN tblBeneficiaries ON tblGenBeneficiariesInEvents.beneficiaryID = tblBeneficiaries.id INNER JOIN tblGenEvents ON tblGenBeneficiariesInEvents.eventID = tblGenEvents.id INNER JOIN tblGenAccounts ON tblGenEvents.eventTypeID = tblGenAccounts.id WHERE (tblGenBeneficiariesInEvents.eventID = {0}) ORDER BY tblGenBeneficiariesInEvents.beneficiaryID", eventID);
+                    //string query = string.Format("SELECT tblBeneficiaries.name AS Name, tblBeneficiaries.cnic AS CNIC, tblBeneficiaries.telephone AS Contact, tblBeneficiaries.address AS Address, tblBeneficiaries.city AS City FROM tblGenBeneficiariesInEvents INNER JOIN tblBeneficiaries ON tblGenBeneficiariesInEvents.beneficiaryID = tblBeneficiaries.id WHERE tblGenBeneficiariesInEvents.eventID = {0} ORDER BY tblGenBeneficiariesInEvents.beneficiaryID ", eventID);
 
                     DataTable dt = p.GetDataTable(query);
                     totalBeneficiaries = dt.Rows.Count.ToString();
+
+                    DataRow dr = dt.Rows[0];
+                    eventPlace = dr[5].ToString();
+                    eventHead = dr[6].ToString();
+                    bool finalized = false;
+                    bool.TryParse(dr[7].ToString(), out finalized);
+
+                    if (finalized == true)
+                    {
+                        eventStatus = "Event has been finalized.";
+                    }
+                    else
+                    {
+                        eventStatus = "Event has not been finalized yet.";
+                    }
+
                     gridBeneficiaries.DataSource = dt;
                     gridBeneficiaries.DataBind();
                     pnlDetails.Visible = true;
