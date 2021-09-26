@@ -10,6 +10,15 @@
     <br />
 
     <div class="cell colspan6">
+        <h4>Beneficiaries Count Report</h4>
+        <hr />
+        <asp:GridView runat="server" ID="gridBeneficiariesStatus" CssClass="table striped hovered border bordered" AutoGenerateColumns="False" OnRowDataBound="gridBeneficiariesStatus_RowDataBound">
+            <Columns>
+                <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+                <asp:BoundField DataField="Count" HeaderText="Count" ReadOnly="True" SortExpression="Count" />
+            </Columns>
+        </asp:GridView>
+
         <h4>Search</h4>
         <hr />
         <asp:GridView runat="server" ID="gridPhotos" AutoGenerateColumns="False" CssClass="table striped hovered border bordered" data-role="datatable" data-seraching="false" OnRowCommand="gridPhotos_RowCommand">
@@ -219,44 +228,44 @@
         </asp:Panel>
         <h4>Benefits Details</h4>
         <hr />
-        <asp:Panel runat="server" ID="pnlBenefits" Visible ="false">
-                    <asp:GridView runat="server" ID="gridBenefits" AutoGenerateColumns="False" CssClass="table striped hovered border bordered">
-                        <Columns>
-                            <asp:TemplateField HeaderText="Event Name">
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("event") %>'></asp:TextBox>
-                                </EditItemTemplate>
-                                <ItemTemplate>
-                                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("event") %>'></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Date">
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("date") %>'></asp:TextBox>
-                                </EditItemTemplate>
-                                <ItemTemplate>
-                                    <asp:Label ID="lblAge" runat="server" Text='<%# Bind("date") %>'></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Monetary Benefits">
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("money") %>'></asp:TextBox>
-                                </EditItemTemplate>
-                                <ItemTemplate>
-                                    <asp:Label ID="lblRelationship" runat="server" Text='<%# Bind("money") %>'></asp:Label>
-                                </ItemTemplate>
-                                <ItemStyle HorizontalAlign="Right" />
-                            </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Other Benefits">
-                                <EditItemTemplate>
-                                    <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("others") %>'></asp:TextBox>
-                                </EditItemTemplate>
-                                <ItemTemplate>
-                                    <asp:Label ID="lblEducation" runat="server" Text='<%# Bind("others") %>'></asp:Label>
-                                </ItemTemplate>
-                            </asp:TemplateField>
-                        </Columns>
-                    </asp:GridView>
+        <asp:Panel runat="server" ID="pnlBenefits" Visible="false">
+            <asp:GridView runat="server" ID="gridBenefits" AutoGenerateColumns="False" CssClass="table striped hovered border bordered">
+                <Columns>
+                    <asp:TemplateField HeaderText="Event Name">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("event") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lblName" runat="server" Text='<%# Bind("event") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Date">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("date") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lblAge" runat="server" Text='<%# Bind("date") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Monetary Benefits">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("money") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lblRelationship" runat="server" Text='<%# Bind("money") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle HorizontalAlign="Right" />
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Other Benefits">
+                        <EditItemTemplate>
+                            <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("others") %>'></asp:TextBox>
+                        </EditItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lblEducation" runat="server" Text='<%# Bind("others") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
         </asp:Panel>
 
 

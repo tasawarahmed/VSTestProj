@@ -306,6 +306,7 @@
     <Compile Include="Logic\Family.cs" />
     <Compile Include="Logic\MaterialsConsumption.cs" />
     <Compile Include="Logic\Salary.cs" />
+    <Compile Include="Logic\StatusAndCount.cs" />
     <Compile Include="Logic\StringsDDList.cs" />
     <Compile Include="Logic\Utilities.cs" />
     <Compile Include="Logic\Validator.cs" />

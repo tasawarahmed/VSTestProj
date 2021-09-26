@@ -31,6 +31,15 @@ namespace IttefaqConstructionServices.Pages.NotForProfit {
         protected global::System.Web.UI.WebControls.Label lblWarning;
         
         /// <summary>
+        /// gridBeneficiariesStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridBeneficiariesStatus;
+        
+        /// <summary>
         /// gridPhotos control.
         /// </summary>
         /// <remarks>

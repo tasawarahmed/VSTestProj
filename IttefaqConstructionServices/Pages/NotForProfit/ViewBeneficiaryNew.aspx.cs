@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -27,7 +28,60 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             {
                 dataBindPhotos();
                 pnlDetails.Visible = false;
+                dataBindStatusGrid();
             }
+        }
+
+        private void dataBindStatusGrid()
+        {
+            List<StatusAndCount> List = new List<StatusAndCount>();
+
+            string query = "SELECT beneficiaryStatus AS Status, COUNT(*) AS Count FROM tblBeneficiaries WHERE (beneficiaryStatus <> 'New') GROUP BY beneficiaryStatus";
+
+            DataTable dt = p.GetDataTable(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                StatusAndCount head = new StatusAndCount();
+                head.Status = "Distribution: Status Wise";
+                List.Add(head);
+
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataRow dr = dt.Rows[i];
+                    StatusAndCount sc = new StatusAndCount();
+                    sc.Status = dr[0].ToString();
+                    sc.Count = int.Parse(dr[1].ToString());
+                    List.Add(sc);
+                }
+                
+            }
+
+            query = "SELECT city AS Status, COUNT(*) AS Count FROM tblBeneficiaries GROUP BY city";
+
+            DataTable dt1 = p.GetDataTable(query);
+
+            if (dt1.Rows.Count > 0)
+            {
+                StatusAndCount head = new StatusAndCount();
+                head.Status = "Distribution: Area Wise";
+                List.Add(head);
+
+                for (int i = 0; i < dt1.Rows.Count; i++)
+                {
+                    DataRow dr = dt1.Rows[i];
+                    StatusAndCount sc = new StatusAndCount();
+                    sc.Status = dr[0].ToString();
+                    sc.Count = int.Parse(dr[1].ToString());
+                    if (sc.Status != "" && sc.Count > 0)
+                    {
+                        List.Add(sc);
+                    }
+                }
+
+            }
+            gridBeneficiariesStatus.DataSource = List;
+            gridBeneficiariesStatus.DataBind();
         }
 
         private void dataBindPhotos()
@@ -232,6 +286,38 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 }
             }
 
+        }
+
+        protected void gridBeneficiariesStatus_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                string text1 = e.Row.Cells[0].Text;
+                bool specialRow = false;
+
+                if (text1.Contains("Distribution:"))
+                {
+                    specialRow = true;
+                }
+
+
+                if (specialRow)
+                //if (e.Row.Cells[0].Text.StartsWith("::"))
+                {
+                    e.Row.Cells[0].Font.Bold = true;
+                    e.Row.Cells[0].Font.Size = 11;
+                    e.Row.Cells[0].BackColor = Color.Beige;
+                    e.Row.Cells[1].Text = string.Empty;
+                    e.Row.Cells[1].BackColor = Color.Beige;
+                }
+
+                else
+                {
+                    //e.Row.Cells[0].Font.Size = 7;
+                    //e.Row.Cells[1].Font.Size = 8;
+                    //e.Row.Height = 3;
+                }
+            }
         }
     }
 }
