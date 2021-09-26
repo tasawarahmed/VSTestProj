@@ -145,11 +145,6 @@
                                                     <span>New Beneficiary</span>
                                     </asp:HyperLink>
                                 </li>
-                                <li>
-                                    <asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="~/Pages/NotForProfit/DeactivateBeneficiary.aspx">
-                                                    <span>Deactivate - Reactivate</span>
-                                    </asp:HyperLink>
-                                </li>
                                 <li class="divider"></li>
                                 <li>
                                     <asp:HyperLink runat="server" ID="HyperLink39" NavigateUrl="~/Pages/NotForProfit/NewDonor.aspx">
@@ -234,9 +229,6 @@
                         </li>
                     </ul>
                 </div>
-
-
-
             </div>
             <div class="row cells12">
                 <asp:ContentPlaceHolder ID="bodyContents" runat="server">

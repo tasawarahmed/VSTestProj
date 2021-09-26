@@ -12,33 +12,35 @@
     <div class="cell colspan3">
         <h4>Personal Details</h4>
         <hr />
+        <div class="input-control text full-size">
+            <asp:TextBox runat="server" placeholder="CNIC" ClientIDMode="Static" ID="txtCNIC" MaxLength="13" onkeypress="return isNumberKey(event)"></asp:TextBox>
+        </div>
+        <asp:Button runat="server" ID="btnGetBeneficiary" CssClass="button primary full-size" Text="Get Beneficiary" OnClick="btnGetBeneficiary_Click"/>
+        <hr />
         <div class="input-control select full-size">
             <asp:DropDownList runat="server" ID="cmbTitle">
                 <asp:ListItem>Select One</asp:ListItem>
-                <asp:ListItem>Mr.</asp:ListItem>
-                <asp:ListItem>Mrs.</asp:ListItem>
-                <asp:ListItem>Miss</asp:ListItem>
-                <asp:ListItem>Not to Mention</asp:ListItem>
+                <asp:ListItem Value="Mr.">Mr.</asp:ListItem>
+                <asp:ListItem Value ="Mrs.">Mrs.</asp:ListItem>
+                <asp:ListItem Value ="Miss">Miss</asp:ListItem>
+                <asp:ListItem Value ="Not to Mention">Not to Mention</asp:ListItem>
             </asp:DropDownList>
         </div>
         <div class="input-control text full-size">
             <asp:TextBox runat="server" placeholder="Name of Beneficiary" ID="txtBeneficiaryName"></asp:TextBox>
         </div>
-        <div class="input-control text full-size">
-            <asp:TextBox runat="server" placeholder="CNIC" ClientIDMode="Static" ID="txtCNIC" MaxLength="13" onkeypress="return isNumberKey(event)"></asp:TextBox>
-        </div>
         <div class="input-control select full-size">
             <asp:DropDownList runat="server" ID="cmbEducation">
                 <asp:ListItem>Select One</asp:ListItem>
-                <asp:ListItem>None</asp:ListItem>
-                <asp:ListItem>Primary</asp:ListItem>
-                <asp:ListItem>Middle</asp:ListItem>
-                <asp:ListItem>Matric</asp:ListItem>
-                <asp:ListItem>Inter</asp:ListItem>
-                <asp:ListItem>Post Inter Diploma</asp:ListItem>
-                <asp:ListItem>Masters</asp:ListItem>
-                <asp:ListItem>Post Masters Diploma</asp:ListItem>
-                <asp:ListItem>Above Masters</asp:ListItem>
+                <asp:ListItem Value="None">None</asp:ListItem>
+                <asp:ListItem Value="Primary">Primary</asp:ListItem>
+                <asp:ListItem Value="Middle">Middle</asp:ListItem>
+                <asp:ListItem Value="Matric">Matric</asp:ListItem>
+                <asp:ListItem Value="Inter">Inter</asp:ListItem>
+                <asp:ListItem Value="Post Inter Diploma">Post Inter Diploma</asp:ListItem>
+                <asp:ListItem Value="Masters">Masters</asp:ListItem>
+                <asp:ListItem Value="Post Masters Diploma">Post Masters Diploma</asp:ListItem>
+                <asp:ListItem Value="Above Masters">Above Masters</asp:ListItem>
             </asp:DropDownList>
         </div>
         <div class="input-control text full-size">
@@ -56,13 +58,13 @@
         <div class="input-control select full-size">
             <asp:DropDownList runat="server" ID="cmbCity">
                 <asp:ListItem>Select One</asp:ListItem>
-                <asp:ListItem>Badrashi</asp:ListItem>
-                <asp:ListItem>Lahore</asp:ListItem>
-                <asp:ListItem>Peshawar</asp:ListItem>
-                <asp:ListItem>Nowshera</asp:ListItem>
-                <asp:ListItem>Malakand</asp:ListItem>
-                <asp:ListItem>Mardan</asp:ListItem>
-                <asp:ListItem>Charsada</asp:ListItem>
+                <asp:ListItem Value="Badrashi">Badrashi</asp:ListItem>
+                <asp:ListItem Value="Lahore">Lahore</asp:ListItem>
+                <asp:ListItem Value="Peshawar">Peshawar</asp:ListItem>
+                <asp:ListItem Value="Nowshera">Nowshera</asp:ListItem>
+                <asp:ListItem Value="Malakand">Malakand</asp:ListItem>
+                <asp:ListItem Value="Mardan">Mardan</asp:ListItem>
+                <asp:ListItem Value="Charsada">Charsada</asp:ListItem>
             </asp:DropDownList>
         </div>
 
@@ -76,8 +78,8 @@
                     <div class="input-control select full-size">
                         <asp:DropDownList runat="server" ID="cmbHouseStatus">
                             <asp:ListItem>Select One</asp:ListItem>
-                            <asp:ListItem>Own House</asp:ListItem>
-                            <asp:ListItem>Rented House</asp:ListItem>
+                            <asp:ListItem Value="Own House">Own House</asp:ListItem>
+                            <asp:ListItem Value="Rented House">Rented House</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </td>
@@ -85,14 +87,14 @@
                     <div class="input-control select full-size">
                         <asp:DropDownList runat="server" ID="cmbIstehqaqBasis">
                             <asp:ListItem>Select One</asp:ListItem>
-                            <asp:ListItem>Orphan</asp:ListItem>
-                            <asp:ListItem>Widow</asp:ListItem>
-                            <asp:ListItem>Divorced</asp:ListItem>
-                            <asp:ListItem>Handicapped</asp:ListItem>
-                            <asp:ListItem>Prisoner</asp:ListItem>
-                            <asp:ListItem>Drug Addict</asp:ListItem>
-                            <asp:ListItem>Nadaar</asp:ListItem>
-                            <asp:ListItem>Other - Mention</asp:ListItem>
+                            <asp:ListItem Value="Orphan">Orphan</asp:ListItem>
+                            <asp:ListItem Value="Widow">Widow</asp:ListItem>
+                            <asp:ListItem Value="Divorced">Divorced</asp:ListItem>
+                            <asp:ListItem Value="Handicapped">Handicapped</asp:ListItem>
+                            <asp:ListItem Value="Prisoner">Prisoner</asp:ListItem>
+                            <asp:ListItem Value="Drug Addict">Drug Addict</asp:ListItem>
+                            <asp:ListItem Value="Nadaar">Nadaar</asp:ListItem>
+                            <asp:ListItem Value="Other - Mention">Other - Mention</asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </td>
@@ -113,8 +115,8 @@
         <div class="input-control text full-size">
             <asp:TextBox runat="server" placeholder="Any Special Issue" ID="txtSpecialIssue"></asp:TextBox>
         </div>
-        <div class="input-control text full-size">
-            <asp:TextBox runat="server" placeholder="Remarks" ID="txtRemarks"></asp:TextBox>
+        <div class="input-control text-area full-size">
+            <asp:TextBox runat="server" Rows="2" placeholder="Remarks" ID="txtRemarks"></asp:TextBox>
         </div>
         <h4>Family Structure</h4>
         <hr />
@@ -225,7 +227,9 @@
     <div class="cell colspan2">
         <h4>Photo</h4>
         <hr />
-        <img id="myImage" runat="server" src="data:image/jpeg; base64, " alt="Photo" width="250" height="250" />
+        <div class="align-center">
+        <img id="myImage" runat="server" src="data:image/jpeg; base64, " alt="Photo" width="100" height="150" />
+        </div>
         <br />
         <div class="input-control file full-size" data-role="input">
             <asp:FileUpload ID="FileUpload1" runat="server" />
@@ -238,8 +242,17 @@
             <div class="input-control text full-size">
                 <asp:TextBox runat="server" placeholder="Office File Reference" ID="txtFileReference"></asp:TextBox>
             </div>
+        <div class="input-control select full-size">
+            <asp:DropDownList runat="server" ID="cmbBenefStatus">
+                <asp:ListItem>Select One</asp:ListItem>
+                <asp:ListItem Value="Pending">Pending</asp:ListItem>
+                <asp:ListItem Value="Approved">Approved</asp:ListItem>
+                <asp:ListItem Value="Rejected">Rejected</asp:ListItem>
+                <asp:ListItem Value="Suspended">Suspended</asp:ListItem>
+            </asp:DropDownList>
+        </div>
         <hr />
-        <asp:Button runat="server" ID="btnAddBeneficiary" CssClass="button primary full-size" Text="Add Beneficiary" OnClick="btnAddBeneficiary_Click" />
+        <asp:Button runat="server" ID="btnAddBeneficiary" CssClass="button primary full-size" Text="Save" OnClick="btnAddBeneficiary_Click" />
         <hr />
     </div>
     <%--    <script type='text/javascript'>

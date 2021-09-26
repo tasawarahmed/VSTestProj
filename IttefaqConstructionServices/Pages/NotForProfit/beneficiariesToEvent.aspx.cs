@@ -23,7 +23,16 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             }
         }
 
-        private void loadEvents()
+        private void refreshGrid()
+        {
+            if (Gridview1.Rows.Count > 0)
+            {
+                Gridview1.UseAccessibleHeader = true;
+                Gridview1.HeaderRow.TableSection = TableRowSection.TableHeader;
+            }
+        }
+
+    private void loadEvents()
         {
             string ddQuery = "SELECT eventName, id FROM tblGenEvents WHERE (isFinalized = 'false') ORDER BY eventName";
 
@@ -38,7 +47,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
 
         private void loadGrid(string criteria)
         {
-            string dtQuery = string.Format("SELECT id AS id, name AS Name, address AS Address, city AS City FROM tblBeneficiaries {0}", criteria);
+            string dtQuery = string.Format("SELECT id AS id, name AS Name, address AS Address, city AS City, status AS Status FROM tblBeneficiaries {0}", criteria);
             DataTable dt = p.GetDataTable(dtQuery);
 
             //Gridview1.DataSource = dt;
@@ -55,12 +64,14 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 b.benefName = dr[1].ToString();
                 b.address = dr[2].ToString();
                 b.city = dr[3].ToString();
+                b.primeDisability = dr[4].ToString();
                 b.benefitHistory = getBenefitHistory(id);
                 list.Add(b);
             }
 
             Gridview1.DataSource = list;
             Gridview1.DataBind();
+            refreshGrid();
         }
 
         private string getBenefitHistory(int id)
@@ -104,7 +115,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                         if (temp != "")
                         {
                             areaCount++;
-                            whereClause += "city = '" + areaItem.Trim() + "' OR ";
+                            whereClause += "city = '" + areaItem.Trim() + "' AND beneficiaryStatus = 'Approved' OR ";
                         }
                     }
 

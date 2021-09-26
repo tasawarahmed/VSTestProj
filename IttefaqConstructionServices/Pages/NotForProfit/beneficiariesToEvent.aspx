@@ -48,7 +48,8 @@
         <asp:Button runat="server" ID="btnAdd" CssClass="button primary full-size" Text="OK" OnClick="btnAdd_Click" />
     </div>
     <div class="cell colspan8">
-        <asp:GridView AllowSorting="true" ID="Gridview1" Width="98%" CssClass="table striped hovered border bordered"  AutoGenerateColumns="False" runat="server">
+<%--        <asp:GridView AllowSorting="true" ID="Gridview1" Width="98%" CssClass="table striped hovered border bordered" data-role="datatable" data-seraching="false" data-order='[[ 1, "asc" ], [ 2, "asc" ]]' data-page-length='500'  AutoGenerateColumns="False" runat="server">--%>
+        <asp:GridView AllowSorting="true" ID="Gridview1" Width="98%" CssClass="table striped hovered border bordered" data-role="datatable" data-seraching="false" data-paging="false"  AutoGenerateColumns="False" runat="server">
             <Columns>
                 <asp:TemplateField>
                     <ItemTemplate>
@@ -72,6 +73,14 @@
                         <%--                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>--%>
                     </ItemTemplate>
                 </asp:TemplateField>
+                <asp:TemplateField Visible="True" HeaderText="Status">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("primeDisability") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lblStatus" runat="server" Text='<%# Bind("primeDisability") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:TemplateField Visible="True" HeaderText="Address">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("address") %>'></asp:TextBox>
@@ -80,7 +89,7 @@
                         <asp:Label ID="lblAddress" runat="server" Text='<%# Bind("address") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField Visible="True" HeaderText="Address">
+                <asp:TemplateField Visible="True" HeaderText="City">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("city") %>'></asp:TextBox>
                     </EditItemTemplate>

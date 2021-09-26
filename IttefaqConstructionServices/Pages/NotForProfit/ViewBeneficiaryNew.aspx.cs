@@ -35,7 +35,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             //string imageSrc = string.Empty;
             //string query = "SELECT benefID, photo FROM tblBeneficiaryPhoto WHERE (id = '')";
             //string dtQuery = ("SELECT tblBeneficiaryPhoto.photo AS [Photo], tblBeneficiaryPhoto.benefID AS [id], tblBeneficiaries.name AS [Name], tblBeneficiaries.address AS [Address], tblBeneficiaries.city AS [City] FROM tblBeneficiaryPhoto INNER JOIN tblBeneficiaries ON tblBeneficiaryPhoto.benefID = tblBeneficiaries.id");
-            string dtQuery = ("SELECT id AS id, name AS Name, cnic, address AS Address, city AS City FROM tblBeneficiaries");
+            string dtQuery = ("SELECT id AS id, name AS Name, cnic, address AS Address, city AS City, beneficiaryStatus AS Status FROM tblBeneficiaries WHERE (beneficiaryStatus <> 'New')");
             //photos = p.getIntObjectDictionary(query);
             DataTable dt = p.GetDataTable(dtQuery);
             gridPhotos.DataSource = dt;
