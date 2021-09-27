@@ -250,7 +250,6 @@
     <Content Include="Pages\Store\Transactions.aspx" />
     <Content Include="Scripts\tinymce.min.js" />
     <Content Include="SiteDetails.aspx" />
-    <Content Include="Test.aspx" />
     <Content Include="Test2.aspx" />
     <Content Include="UnauthorizedAccess.aspx" />
     <Content Include="Web.config">
@@ -779,13 +778,6 @@
     </Compile>
     <Compile Include="SiteDetails.aspx.designer.cs">
       <DependentUpon>SiteDetails.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test2.aspx.cs">
       <DependentUpon>Test2.aspx</DependentUpon>
