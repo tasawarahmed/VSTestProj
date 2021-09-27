@@ -235,8 +235,7 @@
                 </td>
                 <td style="width: 50%">
                     <div class="align-center">
-<%--                        <img id="myImage" runat="server" src="data:image/jpeg; base64, " alt="Photo" width="100" height="150" />--%>
-                        <img id = "myImage" width="100" height="150"/>
+                        <img id="myImage" alt="Photo" width="100" height="150" />
                     </div>
                     <br />
                 </td>
@@ -309,7 +308,7 @@
                 $.ajax({
                     type: "POST",
                     url: "CS.aspx/SaveCapturedImage",
-                    data: "{data: '" + $("#imgCapture")[0].src + "'}",
+                    data: "{data: '" + $("#myImage")[0].src + "'}",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
                     success: function (r) { }

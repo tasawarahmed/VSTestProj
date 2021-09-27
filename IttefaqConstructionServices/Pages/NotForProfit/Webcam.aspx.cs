@@ -223,7 +223,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                         base64Photo = Convert.ToBase64String(bytesPhoto);
 
                         string imageSrc = "data:image/jpeg; base64," + base64Photo;
-                        myImage.Src = imageSrc;
+                        //myImage.Src = imageSrc;
 
                     }
                     catch (Exception excptn)

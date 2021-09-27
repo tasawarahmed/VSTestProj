@@ -265,6 +265,15 @@ namespace IttefaqConstructionServices.Pages.NotForProfit {
         protected global::System.Web.UI.WebControls.Button btnDelChecked;
         
         /// <summary>
+        /// myImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlImage myImage;
+        
+        /// <summary>
         /// btnCameraStart control.
         /// </summary>
         /// <remarks>
@@ -281,15 +290,6 @@ namespace IttefaqConstructionServices.Pages.NotForProfit {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
-        
-        /// <summary>
-        /// btnCapture control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCapture;
         
         /// <summary>
         /// btnSubmitPhoto control.
