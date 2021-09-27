@@ -236,6 +236,8 @@
     <Content Include="Pages\NotForProfit\viewBeneficiaries.aspx" />
     <Content Include="Pages\NotForProfit\viewBeneficiaryEvent.aspx" />
     <Content Include="Pages\NotForProfit\ViewBeneficiaryNew.aspx" />
+    <Content Include="Pages\NotForProfit\Webcam.aspx" />
+    <Content Include="Pages\NotForProfit\WebCam.js" />
     <Content Include="Pages\Sites\NewSite.aspx" />
     <Content Include="Pages\Sites\Regions.aspx" />
     <Content Include="Pages\Sites\SiteAccounts.aspx" />
@@ -659,6 +661,13 @@
     </Compile>
     <Compile Include="Pages\NotForProfit\ViewBeneficiaryNew.aspx.designer.cs">
       <DependentUpon>ViewBeneficiaryNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\Webcam.aspx.cs">
+      <DependentUpon>Webcam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NotForProfit\Webcam.aspx.designer.cs">
+      <DependentUpon>Webcam.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Sites\NewSite.aspx.cs">
       <DependentUpon>NewSite.aspx</DependentUpon>
