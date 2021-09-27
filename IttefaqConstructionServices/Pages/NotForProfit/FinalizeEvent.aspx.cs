@@ -217,7 +217,11 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 Decimal benefit = 0;
                 Decimal.TryParse(tb.Text, out benefit);
 
-                if (benefit == 0)
+                if (benefit == 0 && tbNM.Text == "A")
+                {
+                    
+                }
+                else if (benefit == 0)
                 {
                     gridBenefits += benefitsPerHead;
                     tb.Text = benefitsPerHead.ToString();

@@ -24,5 +24,6 @@ namespace IttefaqConstructionServices.Logic
         public List<Family> familyMembers { get; set; }
         public int id { get; set; }
         public string benefitHistory { get; set; }
+        public string benefStatus { get; set; }
     }
 }

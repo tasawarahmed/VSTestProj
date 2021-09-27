@@ -58,13 +58,17 @@
         <div class="input-control select full-size">
             <asp:DropDownList runat="server" ID="cmbCity">
                 <asp:ListItem>Select One</asp:ListItem>
+                <asp:ListItem Value="Abbot Abad">Abbot Abad</asp:ListItem>
                 <asp:ListItem Value="Badrashi">Badrashi</asp:ListItem>
+                <asp:ListItem Value="Charsada">Charsada</asp:ListItem>
                 <asp:ListItem Value="Lahore">Lahore</asp:ListItem>
-                <asp:ListItem Value="Peshawar">Peshawar</asp:ListItem>
-                <asp:ListItem Value="Nowshera">Nowshera</asp:ListItem>
                 <asp:ListItem Value="Malakand">Malakand</asp:ListItem>
                 <asp:ListItem Value="Mardan">Mardan</asp:ListItem>
-                <asp:ListItem Value="Charsada">Charsada</asp:ListItem>
+                <asp:ListItem Value="Nowshera">Nowshera</asp:ListItem>
+                <asp:ListItem Value="Nowshera Cantt">Nowshera Cantt</asp:ListItem>
+                <asp:ListItem Value="Peshawar">Peshawar</asp:ListItem>
+                <asp:ListItem Value="Swabi">Swabi</asp:ListItem>
+                <asp:ListItem Value="Swat">Swat</asp:ListItem>
             </asp:DropDownList>
         </div>
 

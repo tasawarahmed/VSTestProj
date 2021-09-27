@@ -83,7 +83,7 @@
         </div>
 
     <div class="cell colspan6">
-        <h4>Beneficiaries Involved</h4>
+        <h4>Beneficiaries Involved (Write A for Absent)</h4>
         <hr />
         <asp:GridView AllowSorting="true" ID="Gridview1" Width="98%" CssClass="table striped hovered border bordered"  AutoGenerateColumns="False" runat="server">
             <Columns>

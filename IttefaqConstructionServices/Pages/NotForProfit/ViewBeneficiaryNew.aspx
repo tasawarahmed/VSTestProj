@@ -99,6 +99,7 @@
                             <h4><%= beneficiary.primeDisability %></h4>
                         </td>
                         <td style="width: 15%">
+                            <h3><%= beneficiary.benefStatus %></h3>
                             <div class="image-container rounded">
                                 <div class="frame">
                                     <img id="myImage" runat="server" src="data:image/jpeg; base64, " alt="Photo" width="125" height="200" />

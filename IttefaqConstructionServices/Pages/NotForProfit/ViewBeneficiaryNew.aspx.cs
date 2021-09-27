@@ -158,7 +158,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
 
         private void showBeneficiary(int id)
         {
-            string query = string.Format("SELECT  id, title, name, cnic, education, educationFurtherDetails, telephone, dateOfBirth, address, city, status, monthlyIncome, sourceOfIncome, specialIssue, hasHouse, hasFather, hasMother, hasKids, totalFamilyMembers, remarks FROM tblBeneficiaries WHERE id = {0}", id);
+            string query = string.Format("SELECT  id, title, name, cnic, education, educationFurtherDetails, telephone, dateOfBirth, address, city, status, monthlyIncome, sourceOfIncome, specialIssue, hasHouse, hasFather, hasMother, hasKids, totalFamilyMembers, remarks, beneficiaryStatus FROM tblBeneficiaries WHERE id = {0}", id);
             DataTable dt = p.GetDataTable(query);
 
             if (dt.Rows.Count > 0)
@@ -169,7 +169,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 beneficiary.address = dr[8].ToString();
                 beneficiary.contact = dr[6].ToString();
                 beneficiary.city = dr[9].ToString();
-                beneficiary.primeDisability = "Prime Disability: " + dr[10].ToString();
+                beneficiary.primeDisability = "Category: " + dr[10].ToString();
                 beneficiary.education = dr[4].ToString() + ": " + dr[5].ToString();
                 beneficiary.cnic = dr[3].ToString();
                 dob = DateTime.Parse(dr[7].ToString()).ToString("dd-MMM-yyyy");
@@ -180,6 +180,7 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 beneficiary.hasHouse = bool.Parse(dr[14].ToString());
                 beneficiary.remarks = dr[19].ToString();
                 beneficiary.totalFamily = int.Parse(dr[18].ToString());
+                beneficiary.benefStatus = dr[20].ToString();
 
                 if (beneficiary.hasHouse)
                 {
