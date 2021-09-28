@@ -42,14 +42,43 @@
         <div class="input-control text full-size">
             <asp:TextBox runat="server" placeholder="Non Monetary Benefits" ID="txtOtherBenefits"></asp:TextBox>
         </div>
-        <label>Total Benefits Given</label>
+        <h5>Direct Expenses</h5>
+        <label>Total Benefits to Beneficiaries</label>
         <div class="input-control text full-size">
             <asp:TextBox runat="server" placeholder="Total Benefits Given" ID="txtBenefits"></asp:TextBox>
         </div>
-        <label>Administrative Expenses</label>
-        <div class="input-control text full-size">
-            <asp:TextBox runat="server" placeholder="Total Admin Expenses" ID="txtAdminExpenses"></asp:TextBox>
-        </div>
+        <hr />
+        <h5>Administrative Expenses</h5>
+        <asp:GridView AllowSorting="true" ID="gridExpenses" Width="98%" CssClass="table striped hovered border bordered"  AutoGenerateColumns="False" runat="server">
+            <Columns>
+                <asp:TemplateField Visible="False" HeaderText="ID">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("id") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lblID" runat="server" Text='<%# Bind("id") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField Visible="True" HeaderText="Name">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label runat="server" ID="lblName" Text='<%# Bind("Name") %>' ></asp:Label>
+<%--                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>--%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField Visible="True" HeaderText="Amount">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text=""></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:TextBox ID="txtAmount" runat="server" placeholder="0" CssClass="input-control text full-size align-right" Text=""></asp:TextBox>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
+        <hr />
         <h5>Allocation of Expenses</h5>
         <asp:GridView AllowSorting="true" ID="gridBanks" Width="98%" CssClass="table striped hovered border bordered"  AutoGenerateColumns="False" runat="server">
             <Columns>
@@ -67,7 +96,7 @@
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label runat="server" ID="lblName" Text='<%# Bind("Name") %>' ></asp:Label>
-                        <%--                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>--%>
+<%--                    <asp:Label ID="lblName" runat="server" Text='<%# Bind("Name") %>'></asp:Label>--%>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField Visible="True" HeaderText="Amount">

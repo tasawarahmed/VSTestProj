@@ -103,13 +103,13 @@ namespace IttefaqConstructionServices.Pages.NotForProfit {
         protected global::System.Web.UI.WebControls.TextBox txtBenefits;
         
         /// <summary>
-        /// txtAdminExpenses control.
+        /// gridExpenses control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAdminExpenses;
+        protected global::System.Web.UI.WebControls.GridView gridExpenses;
         
         /// <summary>
         /// gridBanks control.

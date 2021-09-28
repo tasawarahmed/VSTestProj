@@ -22,7 +22,19 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
                 //loadGrid();
                 loadEvents();
                 bindBanksGrid();
+                bindExpensesGrid();
             }
+        }
+
+        private void bindExpensesGrid()
+        {
+            string query = "SELECT id FROM tblGenAccounts WHERE (accountName = 'Administrative Expenses')";
+            int id = p.getAccountID(query);
+
+            string ddQuery = string.Format("SELECT accountName AS Name, id FROM tblGenAccounts WHERE parentAccountID = {0} ORDER BY accountName ", id);
+            DataTable dt = p.GetDataTable(ddQuery);
+            gridExpenses.DataSource = dt;
+            gridExpenses.DataBind();
         }
 
         private void bindBanksGrid()
@@ -153,21 +165,33 @@ namespace IttefaqConstructionServices.Pages.NotForProfit
             Decimal benefitsGiven = Decimal.Parse(txtBenefits.Text);
             string remarks = p.FixString(txtRemarks.Text);
             bool isFinalized = true;
-            Decimal adminExpenses = Decimal.Parse(txtAdminExpenses.Text);
+            Decimal adminExpenses = getAdminExpenses();
 
             string query = string.Format(" UPDATE tblGenEvents SET eventDate = '{0}', eventPlace = '{1}', benefitsGiven = {2}, remarks ='{3}', isFinalized ='{4}', adminExpenses = {5} WHERE id = {6}   ", eventDate, place, benefitsGiven, remarks, isFinalized, adminExpenses, eventID);
             return query;
+        }
+
+        private decimal getAdminExpenses()
+        {
+            Decimal gTotal = 0;
+            for (int i = 0; i < gridExpenses.Rows.Count; i++)
+            {
+                TextBox t = (TextBox)gridExpenses.Rows[i].FindControl("txtAmount");
+                Decimal amount = 0;
+                Decimal.TryParse(t.Text, out amount);
+                gTotal = gTotal + amount;
+            }
+            return gTotal;
         }
 
         private bool accountingAccuracy()
         {
             bool result = false;
             Decimal tBenefits = 0;
-            Decimal tExpenses = 0;
+            Decimal tExpenses = getAdminExpenses();
             Decimal gTotal = 0;
 
             Decimal.TryParse(txtBenefits.Text, out tBenefits);
-            Decimal.TryParse(txtAdminExpenses.Text, out tExpenses);
 
             Decimal gTotalBoxes = tBenefits + tExpenses;
 
